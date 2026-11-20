@@ -1,0 +1,572 @@
+{
+ "format": 1,
+ "bau": "10b02415cb-a8da7b9a",
+ "commit": "10b02415cbd162471bfcebea73b9c58f4a323233",
+ "zeit": 1795195829,
+ "gebaut": "2026-11-20T17:37:32.281Z",
+ "start": "shootergame.exe",
+ "neu": [
+  {
+   "id": "10b02415cb",
+   "zeit": 1795195829,
+   "art": "neu",
+   "text": "Starter und Anleitung im Stil des Spiels - Kopfbild aus dem Spiel, Neu seit deinem letzten Stand, Zahlen des Laufs, Starter aktualisiert sich selbst"
+  },
+  {
+   "id": "9547d45527",
+   "zeit": 1795188763,
+   "art": "neu",
+   "text": "Wind und Nebel in den Bergen - Schneefahnen an Gipfeln und Graten, Wolkenfahnen an den höchsten Gipfeln, Nebelbänke in den Senken"
+  },
+  {
+   "id": "6b74817f13",
+   "zeit": 1795186762,
+   "art": "fix",
+   "text": "Schnee auf NORD-9 - keine Kante mehr am Landefeld, Einschusslöcher auch auf dem Beton ringsum"
+  },
+  {
+   "id": "8c6b4156b7",
+   "zeit": 1795137536,
+   "art": "fix",
+   "text": "Schnee lädt im Heli-Anflug früh - Umzug zum Landeplatz ab 1,3 km, Felddecke vorab, Ducken stempelt im tiefen Schnee"
+  },
+  {
+   "id": "3ab6221784",
+   "zeit": 1795135871,
+   "art": "neu",
+   "text": "Ego-Füße in den Abdrücken des simulierten Schnees, Gang im Takt der Schneeschritte, längere Schritte und Schluss-Schritt"
+  },
+  {
+   "id": "c221df932b",
+   "zeit": 1795134401,
+   "art": "fix",
+   "text": "Schnee - Einschusslöcher und Fußspuren kommen zuverlässig an"
+  },
+  {
+   "id": "3d53421d3d",
+   "zeit": 1795132318,
+   "art": "neu",
+   "text": "Deagle - Metall spiegelt draußen die echte Umgebung, vier Oberflächen, Detailkarten 2048², Gebrauchsspuren, Riefen als Sägezahn-Relief"
+  },
+  {
+   "id": "6dcbea5c3c",
+   "zeit": 1795124514,
+   "art": "neu",
+   "text": "Deagle neu nach 3D-Referenzmodell - Form (Schlitten, Lauf, Sicherung, Rahmen, Griff) und dunkler, seidenmatter Waffenstahl (Material 31)"
+  },
+  {
+   "id": "71da315dfc",
+   "zeit": 1795108231,
+   "art": "neu",
+   "text": "Kern rechnet mit dem sichtbaren simulierten Schnee, Schnee bremst schon flach (Aufzeichnung Version 11)"
+  },
+  {
+   "id": "5b3ddf1b50",
+   "zeit": 1795089499,
+   "art": "neu",
+   "text": "Eigener Körper mit den Beinen der Partner-Figur, Overall und Ärmel im Ranger-Grün, Handschuhe wie bisher"
+  },
+  {
+   "id": "8ee81946bc",
+   "zeit": 1795087686,
+   "art": "neu",
+   "text": "Koop-Partner draußen und in der Kabine als eigene Figur statt des Segmentkörpers"
+  },
+  {
+   "id": "c288e4807b",
+   "zeit": 1795083353,
+   "art": "neu",
+   "text": "Beispiel heli_kulisse - Flugklang und Rotor am Platz NORD-9 als lange WAV-Dateien zum Anhören (Vorlage für das Musikstück flug)"
+  },
+  {
+   "id": "fac2386ad4",
+   "zeit": 1795049336,
+   "art": "neu",
+   "text": "Schnee aus dem Prüfstand überall - zieht mit dem Spieler und dem tief fliegenden Heli um, Felder des Kerns im ganzen Gebiet, Rand ohne Schneekante"
+  },
+  {
+   "id": "6c2c341cc3",
+   "zeit": 1795048368,
+   "art": "neu",
+   "text": "Heli bedienbar und sauber - MG besetzen und schießen, Hülle zu Fuß, Landen auf Schnee, keine Splitter im Cockpit-Himmel, Heck innen ruhig"
+  },
+  {
+   "id": "436c3607e3",
+   "zeit": 1795048094,
+   "art": "fix",
+   "text": "Schnee im Spieltest - Einschüsse bleiben, Tempo wie im Prüfstand, Schritte klingen und wippen mit den Abdrücken, keine Schneeplatte fern von NORD-9"
+  },
+  {
+   "id": "3629997b41",
+   "zeit": 1795044807,
+   "art": "neu",
+   "text": "Nacht wie im Schnee-Prüfstand - blauer Mond, dunkelblauer Himmel, Mondschatten; draußen 5 % Mondlicht statt 1,5 %"
+  },
+  {
+   "id": "8e7415c6fc",
+   "zeit": 1795043823,
+   "art": "fix",
+   "text": "keine Schneeplatten mehr an den Felswänden um den Platz - Decke nach Steilheit, Nische frei, Schneeboden ohne Grunddecke verworfen"
+  },
+  {
+   "id": "b39a60be3c",
+   "zeit": 1795042291,
+   "art": "neu",
+   "text": "sanfte Dünen in der Schneedecke wie die Grunddecke des Prüfstands - ±15 cm über gut 6 m, nur im tiefen Schnee, nur im Bild"
+  },
+  {
+   "id": "9f89847f5e",
+   "zeit": 1795042141,
+   "art": "neu",
+   "text": "Schneehauben auf dem Platz wie im Prüfstand - Dächer, Vorsprünge, Kanten und Kisten mit Dicke und rundem Wulst"
+  },
+  {
+   "id": "859073843e",
+   "zeit": 1795041773,
+   "art": "neu",
+   "text": "Koop-Partner in Oliv und Schwarz, hochwertig eingekleidet"
+  },
+  {
+   "id": "27cc25f915",
+   "zeit": 1795040920,
+   "art": "neu",
+   "text": "Figuren werfen draußen Sonnenschatten - Zielfiguren, Mitspieler und der eigene Körper auf Schnee und Gelände"
+  },
+  {
+   "id": "121d66477c",
+   "zeit": 1795038572,
+   "art": "neu",
+   "text": "Schnee und Licht draußen wie im Schnee-Prüfstand - Tag als Standard, Himmel und Tonkurve des Prüfstands, Tiefe aus dem Kern, Schatten von Bauten und Heli auf dem Schnee"
+  },
+  {
+   "id": "67ea6f8ed8",
+   "zeit": 1795037188,
+   "art": "neu",
+   "text": "Schnee aus dem Prüfstand mit Spielwirkung - Decke nach der Tiefe des Kerns, Krater, Einschüsse, Tritte anderer, Heli-Abwind"
+  },
+  {
+   "id": "0b9ccbe5df",
+   "zeit": 1795035432,
+   "art": "fix",
+   "text": "Tripo-Figuren stehen gerade und aufrecht - Knie fast gestreckt, Becken und Schultern waagerecht und mittig"
+  },
+  {
+   "id": "6edacc3122",
+   "zeit": 1795034601,
+   "art": "fix",
+   "text": "Tripo-Figuren halten den Kopf gerade - Kolben innen an der Brust statt außen auf der Schulter"
+  },
+  {
+   "id": "84eec03f6e",
+   "zeit": 1795034153,
+   "art": "fix",
+   "text": "Tripo-Figuren im Kampfstand - Oberkörper vor, Füße schulterbreit, Brust zum Ziel, Gewicht auf den Ballen"
+  },
+  {
+   "id": "52eba710d9",
+   "zeit": 1795032986,
+   "art": "neu",
+   "text": "Mini-Antarktis als zuschaltbare Welt im Rust-Spiel - ganzer Kontinent auf 24,6 km, Bau aus ETOPO1, Spielwelt unberührt"
+  },
+  {
+   "id": "83e33ae18e",
+   "zeit": 1795029590,
+   "art": "fix",
+   "text": "Innenlichter brennen Wände nicht mehr weiß - je Licht höchstens doppeltes Weiß samt Lichtfarbe"
+  },
+  {
+   "id": "e0267ff798",
+   "zeit": 1795029588,
+   "art": "fix",
+   "text": "Gegner folgen dem Boden - Treppen und Abschnittswechsel, höchstens 0,6 m pro Takt"
+  },
+  {
+   "id": "dce40f4eca",
+   "zeit": 1795028331,
+   "art": "fix",
+   "text": "Tripo-Figuren halten ihr Gleichgewicht - Körperschwerpunkt aus den Gelenken, Becken gleicht Waffe, Kopf und Vorlage aus"
+  },
+  {
+   "id": "5915385140",
+   "zeit": 1795027180,
+   "art": "fix",
+   "text": "Tripo-Figuren im Schießstand - linker Fuß vor, rechter zurück und ausgedreht, Knie gebeugt (Söldner und Koop-Partner)"
+  },
+  {
+   "id": "d0bed679ad",
+   "zeit": 1795025983,
+   "art": "fix",
+   "text": "Taschenlampe brennt weiße Wände nicht mehr aus - Innenwelt × 0,6, Abfall 0,1 r², höchstens 2,0"
+  },
+  {
+   "id": "472d30fd72",
+   "zeit": 1795024826,
+   "art": "fix",
+   "text": "Spieltest 18.11. - Sniper zeigt zur Bildmitte, Sturmgewehr näher, Laser exakt an der Waffe, Sprengläufer als Tripo-Figur, keine leeren Hände im Heli, Schnee bremst"
+  },
+  {
+   "id": "099e72055a",
+   "zeit": 1795024001,
+   "art": "fix",
+   "text": "Tripo-Figuren - Helm und Kopf starr statt verbogen, Handgelenke an den Griffpunkten der Waffe statt zu hoch"
+  },
+  {
+   "id": "dde1823fa0",
+   "zeit": 1795023425,
+   "art": "fix",
+   "text": "Anschlag der Tripo-Figuren neu gerechnet - Kolben außen an der Schulter statt im Körper, Auge auf der Visierlinie, Blick entlang des Laufs (Söldner und Koop-Partner)"
+  },
+  {
+   "id": "e9432ff340",
+   "zeit": 1795020719,
+   "art": "fix",
+   "text": "Gewehrhaltung der Tripo-Figuren - Kolben in der Schulter, beide Hände per Arm-IK an Griff und Vorderschaft, Kopf am Visier (Söldner und Koop-Partner)"
+  },
+  {
+   "id": "0677911587",
+   "zeit": 1795019727,
+   "art": "neu",
+   "text": "Koop-Partner als eigene Figur - Tripo-Söldner neu eingefärbt (blaue Uniform, dunkle Ausrüstung), Karten 1024², Ducken, Zielen und Griff per IK"
+  },
+  {
+   "id": "fca8754a2a",
+   "zeit": 1795019316,
+   "art": "neu",
+   "text": "Heli-Musik „Dorian Watch“ im Rust-Spiel - drei Stufen wie die Musikprobe des JS-Spiels"
+  },
+  {
+   "id": "b5f59da18e",
+   "zeit": 1795019308,
+   "art": "schneller",
+   "text": "Heli innen und außen sauber - Innenraum 978k → 498k Dreiecke, gerade Steppnähte, Kinnfenster, Heck und Nase ohne Durchstiche"
+  },
+  {
+   "id": "bda351dbf8",
+   "zeit": 1795019295,
+   "art": "neu",
+   "text": "Schnee im Rust-Spiel - Spuren, Neuschnee, Treibschnee, Visier-Flocken, Schnee auf Figuren und Knarzen; Prüfstand-Schnee im Einbau-Modus"
+  },
+  {
+   "id": "012a942f68",
+   "zeit": 1795014278,
+   "art": "fix",
+   "text": "Innenwelt ohne MSAA nicht mehr schwarz - Raumspiegel und Tiefenschärfe binden die Tiefe nach der Zahl der Proben"
+  },
+  {
+   "id": "fe77fe4438",
+   "zeit": 1795010521,
+   "art": "neu",
+   "text": "Schnee - Einbau-Modus fürs Spiel (Tiefe, Kantenglättung, Licht und Untergrund des Spiels), Prüfstand bitgleich"
+  },
+  {
+   "id": "48f6eb6f90",
+   "zeit": 1795006455,
+   "art": "neu",
+   "text": "Schrotflinte - Daumen schräg nach vorn über den Hals wie an der Nova, Schusshand ganz im Bild"
+  },
+  {
+   "id": "a512014640",
+   "zeit": 1795005484,
+   "art": "schneller",
+   "text": "Spiel in HDR mit Bloom-Kette, TAA mit Hochskalierung, Grafik-Einstellungen"
+  },
+  {
+   "id": "eccd56933c",
+   "zeit": 1795004193,
+   "art": "neu",
+   "text": "Schrotflinte mit vollem Pistolengriff und neuer Schusshand, Präzisionsgewehr in der Hüfte länger"
+  },
+  {
+   "id": "b2fb0119b9",
+   "zeit": 1795000724,
+   "art": "fix",
+   "text": "Stützhand wie CS2 richtig gelesen - Handschutz in der Handfläche, Daumen oben links längs, Unterarm von unten"
+  },
+  {
+   "id": "4e411de054",
+   "zeit": 1794966367,
+   "art": "neu",
+   "text": "Griffe wie CS2 - Präzisionsgewehr links von der Seite, Schrotflinte rechts als Faust; Aufzeichnungen neu geschrieben"
+  },
+  {
+   "id": "b4eb8a9271",
+   "zeit": 1794964143,
+   "art": "neu",
+   "text": "Schnee-Prüfstand in Rust (Einbauplan Stufe 0)"
+  },
+  {
+   "id": "2b5932816b",
+   "zeit": 1794957894,
+   "art": "neu",
+   "text": "Ego-Sicht - Deagle in der Hüfte rechts unten wie in CS2"
+  },
+  {
+   "id": "beb2bba79e",
+   "zeit": 1794957485,
+   "art": "neu",
+   "text": "Ego-Sicht - Sturmgewehr und Schrotflinte in der Hüfte wie CS2 (kleiner, Stützarm als Linie von unten)"
+  },
+  {
+   "id": "5695d0d176",
+   "zeit": 1794956847,
+   "art": "neu",
+   "text": "Griffe nach Referenzstudie - Pistolengriff geschlossen, Pumpe von unten gegriffen; Aufzeichnungen neu geschrieben"
+  },
+  {
+   "id": "b1fb1104f5",
+   "zeit": 1794955994,
+   "art": "fix",
+   "text": "Rust-Fassung startet auf dem Mac - Rauschtextur mit selbst gerechneter Mip-Stufe statt textureSampleGrad"
+  },
+  {
+   "id": "4809c38c63",
+   "zeit": 1794947054,
+   "art": "neu",
+   "text": "Ego-Sicht - Waffenansicht je Waffe nach Referenzstudie (Pistolen höher, MP und Präzisionsgewehr kleiner)"
+  },
+  {
+   "id": "23dcc03870",
+   "zeit": 1794946258,
+   "art": "fix",
+   "text": "Ego-Sicht - Stützellbogen der Langwaffen wieder unter der Waffe (Arm steil von unten statt quer von links)"
+  },
+  {
+   "id": "e71f265e84",
+   "zeit": 1794944954,
+   "art": "neu",
+   "text": "Handschuh sitzt eng an der Hand - Daumen schlank, Stulpe am Arm, Ärmelsaum enger"
+  },
+  {
+   "id": "7f9aa7d4aa",
+   "zeit": 1794940564,
+   "art": "neu",
+   "text": "Ego-Sicht - Handschuhe wie die Waffen gerechnet (Rauheit aus der Karte, Leder mit Glanz und Narbung)"
+  },
+  {
+   "id": "e6bd8c7321",
+   "zeit": 1794934063,
+   "art": "fix",
+   "text": "Ego-Sicht - Ärmelsaum liegt an statt sich zur Glocke zu weiten, Handschuhe matt und entfleckt"
+  },
+  {
+   "id": "0763f3ab78",
+   "zeit": 1794932897,
+   "art": "neu",
+   "text": "Ego-Sicht - Waffe in der Hüfte größer und flacher gezeichnet, Stützarm der Langwaffen von links unten"
+  },
+  {
+   "id": "4741ce399e",
+   "zeit": 1794927393,
+   "art": "neu",
+   "text": "Waffen Runde 2 - Haltung, Griffe und Formen überarbeitet; Aufzeichnungen neu geschrieben"
+  },
+  {
+   "id": "1adc56d0f2",
+   "zeit": 1794927392,
+   "art": "neu",
+   "text": "Ego-Sicht - Waffe mit richtigen Normalen beleuchtet, Licht vom Boden, runde Ärmel mit sauberem Bund"
+  }
+ ],
+ "starter": {
+  "sha256": "1ee498e65208ad323667d54fb8d35fa41179703ff6028846cf54f33ce0839422",
+  "groesse": 848896
+ },
+ "koop": null,
+ "dateien": {
+  "shootergame.exe": {
+   "pfad": "shootergame.46163c1b6dc29ac6.exe",
+   "sha256": "46163c1b6dc29ac6ed8e8a2cde87501f408987c87a54dd1969bf5bce755a6dd1",
+   "groesse": 19998208
+  },
+  "voreinstellungen.txt": {
+   "pfad": "voreinstellungen.0f3e7934e9195e3c.txt",
+   "sha256": "0f3e7934e9195e3c9ecabd32c3913deb8dffa1ca17cd05a88bc756068b24ef41",
+   "groesse": 630
+  },
+  "pakete/beine.bin": {
+   "pfad": "../pakete/beine.b524bf298c77e2f9.bin",
+   "sha256": "b524bf298c77e2f978db28b4127a1ff3b064f2f5a05163554f6af73c5fa91c79",
+   "groesse": 4193235
+  },
+  "pakete/fels-innen.bin": {
+   "pfad": "../pakete/fels-innen.0cf58794bb7ca011.bin",
+   "sha256": "0cf58794bb7ca01197bd6558bb47ce396fdc4cde5cc6a84dca023d2991fb4e36",
+   "groesse": 4528371
+  },
+  "pakete/figur.bin": {
+   "pfad": "../pakete/figur.edf7c0050289c589.bin",
+   "sha256": "edf7c0050289c589adc0252ca20f4e0b63d89eda60dae4f27d9c91b92a4aedd1",
+   "groesse": 478413
+  },
+  "pakete/gegner-koloss.bin": {
+   "pfad": "../pakete/gegner-koloss.139ff6109ac806e4.bin",
+   "sha256": "139ff6109ac806e4a7251f48d81d4155c97a51c91925733700533c74d1c73196",
+   "groesse": 361846
+  },
+  "pakete/gegner-kriecher.bin": {
+   "pfad": "../pakete/gegner-kriecher.cbfeca84b3e238f0.bin",
+   "sha256": "cbfeca84b3e238f0b497064c7e7b43d21938a4ea58f062ae13fa7df087f7b5f2",
+   "groesse": 1978086
+  },
+  "pakete/gegner-mensch.bin": {
+   "pfad": "../pakete/gegner-mensch.05d0047abe4f1828.bin",
+   "sha256": "05d0047abe4f1828c693bce68eb8f1b98eaa68572eda7686b588beda4a58c5ba",
+   "groesse": 1329986
+  },
+  "pakete/gegner-schwarm.bin": {
+   "pfad": "../pakete/gegner-schwarm.fc94ba0a5f9fcf59.bin",
+   "sha256": "fc94ba0a5f9fcf594ec456a5a972fb59aa1dfea1c1bea9f713781e2ffae23057",
+   "groesse": 558540
+  },
+  "pakete/gegner-skorpion.bin": {
+   "pfad": "../pakete/gegner-skorpion.64c87465b78ab579.bin",
+   "sha256": "64c87465b78ab5798e9d24ee2b301ddbd999a165f734c99bcd6a92a38ad71df8",
+   "groesse": 1961845
+  },
+  "pakete/gegner-soeldner-c.bin": {
+   "pfad": "../pakete/gegner-soeldner-c.dc8e03296f3078e4.bin",
+   "sha256": "dc8e03296f3078e4dbab1c5540fa3c6ae78e779d73c2293e6c78658e08627b51",
+   "groesse": 2083253
+  },
+  "pakete/gegner-soeldner-f.bin": {
+   "pfad": "../pakete/gegner-soeldner-f.8eb9706841de4fca.bin",
+   "sha256": "8eb9706841de4fca0ece064515e035156923d1eac7ea49c7b123ffb4537f872b",
+   "groesse": 1826888
+  },
+  "pakete/gegner-soeldner-g.bin": {
+   "pfad": "../pakete/gegner-soeldner-g.0af75e70d3502271.bin",
+   "sha256": "0af75e70d35022718af2ea70c12dd7b4d0c0ac8bd379941722b8886f5790e3a0",
+   "groesse": 2023390
+  },
+  "pakete/gegner-soeldner-helm.bin": {
+   "pfad": "../pakete/gegner-soeldner-helm.f41ab0c85cca2e83.bin",
+   "sha256": "f41ab0c85cca2e83ddb3c160bb5628a04a0c4c4c5603f4adef99cfe3f6dd2d06",
+   "groesse": 1744614
+  },
+  "pakete/gegner-soeldner-m.bin": {
+   "pfad": "../pakete/gegner-soeldner-m.32d70ebe3430e7ea.bin",
+   "sha256": "32d70ebe3430e7eaa050bcf55e5e0f592e2f826b3412d44f0e97c56734d80b6b",
+   "groesse": 2049649
+  },
+  "pakete/gegner-spinne.bin": {
+   "pfad": "../pakete/gegner-spinne.0e9473eb763823ba.bin",
+   "sha256": "0e9473eb763823ba5f66bf6b75ff6ce4bb84cef08b53e6a96081fd0bcd29c9db",
+   "groesse": 2040480
+  },
+  "pakete/gegner-springer-panzer.bin": {
+   "pfad": "../pakete/gegner-springer-panzer.1e85d5e24587dff5.bin",
+   "sha256": "1e85d5e24587dff5183e14035322bad6bf0c2a51321a8cfe243593ac0ac22ef0",
+   "groesse": 1885650
+  },
+  "pakete/gegner-titan.bin": {
+   "pfad": "../pakete/gegner-titan.204e21e3632ba199.bin",
+   "sha256": "204e21e3632ba19984daabb9413fcb9c7e24260897eda4a2e7f623a537dc5eb5",
+   "groesse": 3228517
+  },
+  "pakete/gelaende.bin": {
+   "pfad": "../pakete/gelaende.5515009dff277b3b.bin",
+   "sha256": "5515009dff277b3b6d4ca12a6ab2d030451f6370fe9f1b25feee45581befb925",
+   "groesse": 34902338
+  },
+  "pakete/hand.bin": {
+   "pfad": "../pakete/hand.e9fe7e9e28f0fa4a.bin",
+   "sha256": "e9fe7e9e28f0fa4aa554a055a80d2c75c2eba5f9d37aae2772f7a6569d70908a",
+   "groesse": 4359770
+  },
+  "pakete/heli-innen.bin": {
+   "pfad": "../pakete/heli-innen.077039c02b91145c.bin",
+   "sha256": "077039c02b91145c3c1f131f41d92ed85c3ab7742476efb1cfe7df14a4967493",
+   "groesse": 4798078
+  },
+  "pakete/heli-moebel.bin": {
+   "pfad": "../pakete/heli-moebel.b0bdb29dabd312d8.bin",
+   "sha256": "b0bdb29dabd312d807be27ad42e0b2b8b9046ea24205cb6b852dd74bf878eb90",
+   "groesse": 34309410
+  },
+  "pakete/heli.bin": {
+   "pfad": "../pakete/heli.18caffced247b9c9.bin",
+   "sha256": "18caffced247b9c91299e1ad02867b8b4509b05de3995fceaadc8a0983437e58",
+   "groesse": 1652114
+  },
+  "pakete/koerper.bin": {
+   "pfad": "../pakete/koerper.0332be01d4dff3b2.bin",
+   "sha256": "0332be01d4dff3b2f948ece96b16141d32e69877fe3eb0a63e3a26114a13b06e",
+   "groesse": 3665775
+  },
+  "pakete/modelle.txt": {
+   "pfad": "../pakete/modelle.b2034c14c1926cd7.txt",
+   "sha256": "b2034c14c1926cd7f98449bdcc98d15baf185608df1eb19dd8390f011733aa6e",
+   "groesse": 974
+  },
+  "pakete/musik/flug-2.wav": {
+   "pfad": "../pakete/musik/flug-2.9e5517a02dc6fd3a.wav",
+   "sha256": "9e5517a02dc6fd3a3ed709ceb5e8981b73a608866191d92754b276e4c402a9b9",
+   "groesse": 19402182
+  },
+  "pakete/musik/flug-3.wav": {
+   "pfad": "../pakete/musik/flug-3.6dbedf29ef44505b.wav",
+   "sha256": "6dbedf29ef44505b8b8378a0a5e29b84fa9d0a59d80bcea9a51d2a23729fbc95",
+   "groesse": 19402182
+  },
+  "pakete/musik/flug.wav": {
+   "pfad": "../pakete/musik/flug.ff93e93d756342aa.wav",
+   "sha256": "ff93e93d756342aaee408f30dbff550a34a478728e53ca26367354322becda89",
+   "groesse": 19402182
+  },
+  "pakete/musik/liste.txt": {
+   "pfad": "../pakete/musik/liste.6165b58fa9d7029f.txt",
+   "sha256": "6165b58fa9d7029f71a30332b7822b9a5e26fca772a8f16c7d7efe693ea79a2f",
+   "groesse": 19
+  },
+  "pakete/partner.bin": {
+   "pfad": "../pakete/partner.5103b30d52a9e05a.bin",
+   "sha256": "5103b30d52a9e05a52536eeb3ff3a71e34a827327b029129243ff6e4d314268c",
+   "groesse": 15081632
+  },
+  "pakete/platz-nord9.bin": {
+   "pfad": "../pakete/platz-nord9.954a1ef76c94404e.bin",
+   "sha256": "954a1ef76c94404e4dbb89878a838480fba68d29399bc68112a9bf0a15557edd",
+   "groesse": 3734541
+  },
+  "pakete/waffe-granate.bin": {
+   "pfad": "../pakete/waffe-granate.c0926decc1482171.bin",
+   "sha256": "c0926decc1482171a1f839243930df45e7095a75db6ad642b2c0021e04bf452c",
+   "groesse": 33475
+  },
+  "pakete/waffe-magnum.bin": {
+   "pfad": "../pakete/waffe-magnum.c5b3a81ac5e25791.bin",
+   "sha256": "c5b3a81ac5e257912ef9fc87484ed443fe1d1ddbfdc44df10a35b3838f6cb567",
+   "groesse": 6229630
+  },
+  "pakete/waffe-messer.bin": {
+   "pfad": "../pakete/waffe-messer.28dcc1e722524ba0.bin",
+   "sha256": "28dcc1e722524ba0ccdf4e890b55567315176040261103475033cc51b1bd71a9",
+   "groesse": 275001
+  },
+  "pakete/waffe-mp.bin": {
+   "pfad": "../pakete/waffe-mp.6c328be64630b9ae.bin",
+   "sha256": "6c328be64630b9aef90aadc40bdeb5c921167d0a824612d2b0fbec1547dc3920",
+   "groesse": 3354609
+  },
+  "pakete/waffe-pistole.bin": {
+   "pfad": "../pakete/waffe-pistole.1af43f16e4731a57.bin",
+   "sha256": "1af43f16e4731a57b48b46b8f67dcf16f1c387bde76ec88e465be8f62061f9f6",
+   "groesse": 2621457
+  },
+  "pakete/waffe-praezision.bin": {
+   "pfad": "../pakete/waffe-praezision.b4ca527eacf278d3.bin",
+   "sha256": "b4ca527eacf278d3fa6d291f6d6e64cc6081a25d31dc9e2c28e24710c18ae00e",
+   "groesse": 3316500
+  },
+  "pakete/waffe-schrotflinte.bin": {
+   "pfad": "../pakete/waffe-schrotflinte.0575939384fa2579.bin",
+   "sha256": "0575939384fa25798c43ab685878b6cf83522f8d61dc92741bec5a83ce3b7e78",
+   "groesse": 2658461
+  },
+  "pakete/waffe-sturmgewehr.bin": {
+   "pfad": "../pakete/waffe-sturmgewehr.ec3e9dc3b43d9b5b.bin",
+   "sha256": "ec3e9dc3b43d9b5b2dc171268658d404d2a17c537cd57c91104a757f736ab89b",
+   "groesse": 4172757
+  }
+ }
+}

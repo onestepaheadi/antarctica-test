@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Shootergame</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0b0d10; color: #d8dde3; font: 16px system-ui, sans-serif; overflow: hidden; }
+  canvas { display: block; width: 100vw; height: 100vh; outline: none; }
+  #lade { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; font-size: 20px; padding: 0 24px; text-align: center; line-height: 1.5; }
+  #lade:empty { display: none; }
+  #lade:not(:empty)::after, body.laedt #puls { content: ''; display: block; width: 18px; height: 18px; border-radius: 50%;
+    border: 3px solid #3a3f46; border-top-color: #dba433; animation: drehen .9s linear infinite; }
+  #lade:not(:empty)::after { margin: 14px auto 0; }
+  #lade.fehler::after { display: none; }
+  #lade.fehler { pointer-events: auto; }
+  #lade small { display: block; margin-top: 10px; font-size: 14px; opacity: .7; }
+  #puls { display: none; position: fixed; right: 24px; bottom: 24px; }
+  @keyframes drehen { to { transform: rotate(360deg); } }
+  /* Meldungen des Programms (Ladezeiten, Prüfsummen): für Prüfungen und Fehlersuche, sichtbar nur mit ?mess=1 */
+  #mess { display: none; position: fixed; left: 8px; bottom: 8px; margin: 0; font: 12px ui-monospace, monospace; opacity: .75; white-space: pre-wrap; pointer-events: none; }
+  body.mess #mess { display: block; }
+  /* Hinweis auf einen neuen Stand des Servers (version.json) */
+  #neu { position: fixed; top: 12px; left: 50%; transform: translateX(-50%); z-index: 10; display: none; gap: 12px; align-items: center;
+    padding: 10px 14px; border-radius: 8px; background: #1b2027; border: 1px solid #dba433; box-shadow: 0 6px 24px #0008; font-size: 15px; }
+  #neu.an { display: flex; }
+  #neu button { font: inherit; padding: 6px 12px; border-radius: 6px; border: 0; background: #dba433; color: #111; cursor: pointer; }
+  /* Hinweis auf die Windows-Fassung (Starter, nur mit --nativ gebaut): flach oben links, über dem Kasten des Hauptmenüs (der bei 720 px
+     Höhe erst bei y≈100 beginnt); weg, sobald das Spiel die Maus fängt, und ausblendbar */
+  #windows { position: fixed; top: 8px; left: 8px; z-index: 11; max-width: min(470px, calc(100vw - 16px)); box-sizing: border-box;
+    padding: 6px 32px 7px 12px; border-radius: 8px; background: #1b2027f0; border: 1px solid #dba433; box-shadow: 0 6px 24px #0008;
+    font-size: 12px; line-height: 1.35; }
+  #windows[hidden], body.gefangen #windows { display: none; }
+  #windows a { display: inline-block; margin-bottom: 2px; color: #f0c25a; font-size: 15px; font-weight: 600; }
+  #windows button { position: absolute; top: 2px; right: 4px; font: 20px/1 system-ui, sans-serif; padding: 4px 6px; border: 0;
+    background: none; color: #d8dde3; cursor: pointer; opacity: .7; }
+</style>
+</head>
+<body>
+<canvas id="spiel" tabindex="0"></canvas>
+<div id="lade">Programm laden …</div>
+<div id="puls"></div>
+<pre id="mess"></pre>
+<div id="windows" hidden><a href="shootergame-starter.exe" download>Windows-Fassung herunterladen (empfohlen)</a><br>
+  <span id="windows-text">Kleiner Starter, hält das Spiel aktuell.</span> Warnt Windows vor einem „unbekannten Herausgeber“:
+  „Weitere Informationen“ → „Trotzdem ausführen“.
+  <button type="button" aria-label="Hinweis ausblenden" title="Ausblenden">×</button></div>
+<div id="neu" role="status"><span>Neue Version verfügbar – neu laden</span><button type="button" onclick="location.reload()">Neu laden</button></div>
+<script>
+  // Stand dieser Seite (scripts/ausgabe-bauen.mjs): Bau-Kennung, Ordner des Programms, Pakete mit Inhalts-Hash im Namen, Größe des wasm,
+  // statisch (Dateiserver ohne Vermittler: Koop nur mit einstellung.json).
+  window.SHOOTERGAME_AUSGABE = {"bau":"10b02415cb-a8da7b9a","pkg":"pkg-acbc50bd2752eebe","pakete":{"beine.bin":"beine.b524bf298c77e2f9.bin","fels-innen.bin":"fels-innen.0cf58794bb7ca011.bin","figur.bin":"figur.edf7c0050289c589.bin","gegner-koloss.bin":"gegner-koloss.139ff6109ac806e4.bin","gegner-kriecher.bin":"gegner-kriecher.cbfeca84b3e238f0.bin","gegner-mensch.bin":"gegner-mensch.05d0047abe4f1828.bin","gegner-schwarm.bin":"gegner-schwarm.fc94ba0a5f9fcf59.bin","gegner-skorpion.bin":"gegner-skorpion.64c87465b78ab579.bin","gegner-soeldner-c.bin":"gegner-soeldner-c.dc8e03296f3078e4.bin","gegner-soeldner-f.bin":"gegner-soeldner-f.8eb9706841de4fca.bin","gegner-soeldner-g.bin":"gegner-soeldner-g.0af75e70d3502271.bin","gegner-soeldner-helm.bin":"gegner-soeldner-helm.f41ab0c85cca2e83.bin","gegner-soeldner-m.bin":"gegner-soeldner-m.32d70ebe3430e7ea.bin","gegner-spinne.bin":"gegner-spinne.0e9473eb763823ba.bin","gegner-springer-panzer.bin":"gegner-springer-panzer.1e85d5e24587dff5.bin","gegner-titan.bin":"gegner-titan.204e21e3632ba199.bin","gelaende.bin":"gelaende.5515009dff277b3b.bin","hand.bin":"hand.e9fe7e9e28f0fa4a.bin","heli-innen.bin":"heli-innen.077039c02b91145c.bin","heli-moebel.bin":"heli-moebel.b0bdb29dabd312d8.bin","heli.bin":"heli.18caffced247b9c9.bin","koerper.bin":"koerper.0332be01d4dff3b2.bin","modelle.txt":"modelle.b2034c14c1926cd7.txt","musik/flug-2.wav":"musik/flug-2.9e5517a02dc6fd3a.wav","musik/flug-3.wav":"musik/flug-3.6dbedf29ef44505b.wav","musik/flug.wav":"musik/flug.ff93e93d756342aa.wav","musik/liste.txt":"musik/liste.6165b58fa9d7029f.txt","partner.bin":"partner.5103b30d52a9e05a.bin","platz-nord9.bin":"platz-nord9.954a1ef76c94404e.bin","waffe-granate.bin":"waffe-granate.c0926decc1482171.bin","waffe-magnum.bin":"waffe-magnum.c5b3a81ac5e25791.bin","waffe-messer.bin":"waffe-messer.28dcc1e722524ba0.bin","waffe-mp.bin":"waffe-mp.6c328be64630b9ae.bin","waffe-pistole.bin":"waffe-pistole.1af43f16e4731a57.bin","waffe-praezision.bin":"waffe-praezision.b4ca527eacf278d3.bin","waffe-schrotflinte.bin":"waffe-schrotflinte.0575939384fa2579.bin","waffe-sturmgewehr.bin":"waffe-sturmgewehr.ec3e9dc3b43d9b5b.bin"},"wasm":10203445,"statisch":true,"nativ":{"starter":"shootergame-starter.exe","groesse":848896}};
+  // Alle Adressen gelten relativ zur Seite, damit derselbe Bau an der Wurzel und in einem Unterordner läuft (https://host/ordner/).
+  // Ohne Schrägstrich am Ende (https://host/ordner, sonst leitet der Server um) ihn ergänzen, bevor etwas relativ aufgelöst wird.
+  (() => {
+    const p = location.pathname;
+    if (!p.endsWith('/') && !/\.[A-Za-z0-9]+$/.test(p.slice(p.lastIndexOf('/') + 1)))
+      history.replaceState(history.state, '', p + '/' + location.search + location.hash);
+  })();
+</script>
+<script type="module">
+  const A = window.SHOOTERGAME_AUSGABE;
+  const BASIS = new URL('./', location.href);
+  const hier = pfad => new URL(pfad, BASIS).href;
+  if (/[?&]mess=1(&|$)/.test(location.search)) document.body.classList.add('mess');
+  // Windows-Fassung (Starter): nur wenn mitgebaut, nicht in Prüf-Aufrufen (Wiedergabe, Prüfbild), ausblendbar für diese Sitzung
+  if (A.nativ && !/[?&](wiedergabe|ui|ganz|koop)=/.test(location.search)) {
+    const w = document.getElementById('windows');
+    let aus = false;
+    try { aus = sessionStorage.getItem('windows-aus') === '1'; } catch { /* ohne Speicher */ }
+    if (A.nativ.groesse) document.getElementById('windows-text').textContent =
+      `Kleiner Starter (${(A.nativ.groesse / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 1 })} MB), hält das Spiel aktuell.`;
+    w.hidden = aus;
+    w.querySelector('button').addEventListener('click', () => { w.hidden = true; try { sessionStorage.setItem('windows-aus', '1'); } catch { } });
+    document.addEventListener('pointerlockchange', () => document.body.classList.toggle('gefangen', !!document.pointerLockElement));
+  }
+  const lade = document.getElementById('lade');
+  const fehler = (text, klein = '') => {
+    lade.textContent = text;
+    if (klein) { const k = document.createElement('small'); k.textContent = klein; lade.append(k); }
+    lade.classList.add('fehler');
+  };
+  const mb = b => (b / 1e6).toLocaleString('de-DE', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  // Das Programm holt die Pakete unter <Seite>/pakete/<name> (SHOOTERGAME_PAKETE); ausgeliefert werden sie unter ihrem Namen mit
+  // Inhalts-Hash. So holt ein Browser nach einem Neuladen nie ein altes Paket zum neuen Programm (oder umgekehrt), und unveränderte
+  // Pakete bleiben im Cache.
+  const PAKETE = hier('pakete');
+  window.SHOOTERGAME_PAKETE = PAKETE;
+  const roh = window.fetch.bind(window);
+  window.fetch = (eingabe, init) => {
+    if (typeof eingabe === 'string' && eingabe.startsWith(PAKETE + '/')) {
+      const name = eingabe.slice(PAKETE.length + 1);
+      if (A.pakete[name]) eingabe = PAKETE + '/' + A.pakete[name];
+    }
+    return roh(eingabe, init);
+  };
+  // Neuer Stand auf dem Server? Beim Start und danach alle 5 Minuten sowie beim Zurückkehren zum Tab.
+  let gemeldet = false;
+  async function standPruefen() {
+    try {
+      const v = await (await roh(hier('version.json'), { cache: 'no-store' })).json();
+      if (v.bau && v.bau !== A.bau && !gemeldet) {
+        gemeldet = true;
+        document.getElementById('neu').classList.add('an');
+        console.warn(`Neue Version verfügbar: ${v.bau} (diese Seite: ${A.bau})`);
+      }
+    } catch { /* offline: später wieder */ }
+  }
+  standPruefen();
+  setInterval(standPruefen, 5 * 60 * 1000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) standPruefen(); });
+
+  // Koop-Vermittler aus einstellung.json neben der Seite ({"koop": "wss://host"}): auf dem Server änderbar, ohne neu zu bauen. Statisch
+  // ausgeliefert ohne Eintrag: Koop gesperrt (kein Versuch zur eigenen Seite, die keinen Vermittler hat). Mit dem Node-Server der
+  // Auslieferung ohne Eintrag: die eigene Seite.
+  async function einstellung() {
+    let e = {};
+    try { const a = await roh(hier('einstellung.json'), { cache: 'no-store' }); if (a.ok) e = await a.json(); } catch { /* fehlt */ }
+    const koop = typeof e.koop === 'string' ? e.koop.trim() : '';
+    if (koop) window.SHOOTERGAME_KOOP = koop;
+    else if (A.statisch) window.SHOOTERGAME_KOOP = '';
+  }
+
+  // Grafik: WebGPU braucht einen sicheren Kontext (https oder localhost) und einen Browser, der es kann. Vor dem Laden prüfen, damit
+  // Tester eine klare Meldung sehen statt eines schwarzen Bilds (und nicht erst Megabytes laden).
+  const BITTE = 'Bitte aktuelles Chrome oder Edge am PC verwenden (Windows, macOS oder ChromeOS).';
+  async function grafikPruefen() {
+    if (!window.isSecureContext) return fehler('Die Seite muss über https geöffnet werden.', 'WebGPU (die Grafik) geht nur über eine sichere Verbindung.');
+    if (!navigator.gpu) return fehler('Dieser Browser kann kein WebGPU, das die Grafik braucht. ' + BITTE, 'Handys und Tablets gehen nicht: Das Spiel braucht Tastatur und Maus.');
+    let adapter = null;
+    try { adapter = await navigator.gpu.requestAdapter(); } catch { /* wie ohne */ }
+    if (!adapter) return fehler('WebGPU ist in diesem Browser abgeschaltet oder die Grafikkarte wird nicht unterstützt. ' + BITTE,
+      'Hilft das nicht: unter chrome://gpu nachsehen, ob „WebGPU: Hardware accelerated“ steht.');
+    return true;
+  }
+
+  // Programm laden mit Fortschritt (MB von gesamt): das wasm selbst holen und mitzählen (entpackte Bytes gegen die Größe aus dem Bau),
+  // dann als Strom an wasm-bindgen geben (übersetzt beim Laden). Danach zeigt das Programm den Fortschritt der Pakete selbst.
+  async function wasmMitFortschritt() {
+    const a = await roh(hier(`${A.pkg}/spiel_bg.wasm`));
+    if (!a.ok) throw new Error(`Programm nicht gefunden (HTTP ${a.status})`);
+    const gesamt = A.wasm || +a.headers.get('content-length') || 0;
+    if (!a.body || !gesamt) return a;
+    let geladen = 0;
+    const zeigen = () => { lade.textContent = `Programm laden … ${mb(geladen)} von ${mb(gesamt)} MB`; };
+    zeigen();
+    const leser = a.body.getReader();
+    const strom = new ReadableStream({
+      async pull(c) {
+        const { done, value } = await leser.read();
+        if (done) { c.close(); return; }
+        geladen += value.byteLength; zeigen(); c.enqueue(value);
+      },
+      cancel(g) { leser.cancel(g); },
+    });
+    return new Response(strom, { headers: { 'Content-Type': 'application/wasm' } });
+  }
+
+  if (await grafikPruefen() === true) {
+    try {
+      const [m, wasm] = await Promise.all([import(hier(`${A.pkg}/spiel.js`)), wasmMitFortschritt(), einstellung()]);
+      lade.textContent = 'Programm starten …';
+      await m.default({ module_or_path: wasm });
+    } catch (f) {
+      fehler('Start fehlgeschlagen: ' + (f?.message || f), 'Seite neu laden; hilft das nicht, bitte mit der Bau-Kennung melden: ' + A.bau);
+    }
+  }
+</script>
+</body>
+</html>

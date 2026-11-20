@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="dark">
+<title>Rising Frost</title>
+<link rel="preload" href="D-DIN-Bold.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+@font-face{font-family:"D-DIN";src:url(D-DIN.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"D-DIN";src:url(D-DIN-Bold.ttf) format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:"Stationsmono";src:url(Stationsmono-SemiBold.ttf) format("truetype");font-weight:600;font-display:swap}
+:root{
+  --grund:#10110c;--tafel:#171912;--flaeche:rgba(184,180,156,.05);--linie:rgba(184,180,156,.16);--linie2:rgba(184,180,156,.3);
+  --fg:#ece9db;--text:#b9b6a8;--leise:#a09d8f;--akzent:#c8b27a;--akzent-hell:#d8c48e;--akzent-text:#171107;
+  --gut:#7fd39a;--warn:#ff8a6a;--eis:#b8b49c;
+  --titel:"D-DIN","Bahnschrift","Segoe UI",system-ui,sans-serif;--mono:"Stationsmono","Cascadia Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{background:var(--grund)}
+body{margin:0;background:var(--grund);color:var(--text);font:16px/1.6 var(--titel);-webkit-font-smoothing:antialiased}
+a{color:var(--akzent)}
+strong{color:var(--fg);font-weight:700}
+em{font-style:normal;color:var(--fg);font-weight:700}
+code{font:600 13px/1.4 var(--mono);color:var(--fg);background:var(--flaeche);border:1px solid var(--linie);padding:1px 6px;overflow-wrap:anywhere}
+
+/* Kopf mit Bild aus dem Spiel */
+.held{position:relative;min-height:min(78vh,640px);display:flex;align-items:flex-end;
+  background:linear-gradient(180deg,rgba(16,17,12,.25) 0%,rgba(16,17,12,.35) 40%,rgba(16,17,12,.92) 82%,var(--grund) 100%),
+    linear-gradient(90deg,rgba(16,17,12,.7) 0%,rgba(16,17,12,0) 60%),url(kopf.jpg) center 35%/cover no-repeat;
+  border-top:3px solid var(--akzent)}
+.held-innen{width:100%;max-width:1040px;margin:0 auto;padding:96px 24px 40px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.chips span{font:700 11px/1 var(--titel);letter-spacing:.22em;text-transform:uppercase;color:var(--akzent);
+  border:1px solid rgba(200,178,122,.45);background:rgba(16,17,12,.55);padding:6px 10px}
+h1{margin:0;font:700 clamp(44px,8vw,92px)/.95 var(--titel);letter-spacing:.08em;text-transform:uppercase;color:var(--fg);
+  text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.unterzeile{margin:10px 0 0 4px;font:400 14px/1 var(--titel);letter-spacing:.42em;text-transform:uppercase;color:var(--akzent)}
+.anriss{max-width:620px;margin:22px 0 0;font-size:18px;color:var(--text)}
+.aktionen{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.knopf{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;font:700 14px/1 var(--titel);
+  letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--fg);background:rgba(16,17,12,.55);
+  border:1px solid var(--linie2);transition:background .15s,border-color .15s,color .15s}
+.knopf:hover{border-color:var(--akzent);background:rgba(200,178,122,.1)}
+.knopf.haupt{background:var(--akzent);border-color:var(--akzent);color:var(--akzent-text)}
+.knopf.haupt:hover{background:var(--akzent-hell);border-color:var(--akzent-hell)}
+.knopf:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--akzent-hell);outline-offset:3px}
+.fein{margin:14px 0 0;font-size:13px;color:var(--leise)}
+
+/* Inhalt */
+.inhalt{max-width:1040px;margin:0 auto;padding:24px 24px 16px}
+h2{margin:0 0 16px;font:700 12px/1 var(--titel);letter-spacing:.24em;text-transform:uppercase;color:var(--akzent)}
+h2::after{content:"";display:block;height:1px;margin-top:12px;background:var(--linie)}
+section{margin:0 0 28px}
+.schritte{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.schritte li{background:var(--flaeche);border:1px solid var(--linie);padding:18px 18px 16px;position:relative}
+.schritte .nr{display:block;font:700 34px/1 var(--titel);color:rgba(200,178,122,.55);letter-spacing:.04em}
+.schritte h3{margin:10px 0 6px;font:700 15px/1.2 var(--titel);letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
+.schritte p{margin:0;font-size:14.5px;line-height:1.55}
+.zwei{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.drei{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tafel{background:var(--tafel);border:1px solid var(--linie);padding:20px 22px;margin:0 0 16px}
+.tasten{display:grid;grid-template-columns:auto 1fr;gap:7px 14px;margin:0;align-items:center}
+.tasten dt{display:flex;gap:4px;align-items:center;color:var(--leise)}
+.tasten dd{margin:0;font-size:14.5px;color:var(--text)}
+kbd{display:inline-block;min-width:24px;padding:3px 7px;font:600 11.5px/1.2 var(--mono);color:var(--fg);text-align:center;
+  background:#1c1e17;border:1px solid var(--linie2);border-bottom-width:2px}
+.neu{list-style:none;margin:0;padding:0}
+.neu li{display:grid;grid-template-columns:58px 1fr;gap:4px 10px;padding:9px 0;border-bottom:1px solid var(--linie)}
+.neu li:last-child{border-bottom:0}
+.neu .marke{align-self:start;margin-top:2px;font:700 10px/1 var(--titel);letter-spacing:.12em;text-align:center;padding:5px 0;
+  color:var(--akzent);background:rgba(200,178,122,.14)}
+.neu .marke.fix{color:var(--gut);background:rgba(127,211,154,.12)}
+.neu .marke.schneller{color:var(--eis);background:rgba(184,180,156,.14)}
+.neu .was{font-size:14.5px;line-height:1.45}
+.neu .was b{color:var(--fg)}
+.neu .wann{grid-column:2;font-size:12px;color:var(--leise);opacity:.8}
+.neu li.leise{display:block;color:var(--leise)}
+.neu-fuss{margin:12px 0 0;font-size:12.5px;color:var(--leise)}
+.liste{margin:0;padding-left:18px}
+.liste li{margin:6px 0;font-size:14.5px}
+.liste li::marker{color:var(--akzent)}
+.leise{color:var(--leise);font-size:13.5px}
+.fuss{max-width:1040px;margin:0 auto;padding:8px 24px 40px;font-size:13px;color:var(--leise)}
+.fuss p{margin:0;padding-top:18px;border-top:1px solid var(--linie)}
+@media (max-width:900px){.schritte{grid-template-columns:repeat(2,1fr)}.drei{grid-template-columns:1fr}.zwei{grid-template-columns:1fr}}
+@media (max-width:520px){.schritte{grid-template-columns:1fr}.held-innen{padding:72px 16px 32px}.inhalt,.fuss{padding-left:16px;padding-right:16px}
+  .knopf{width:100%}.unterzeile{letter-spacing:.3em}}
+
+/* Sperre und Hinweis fürs Handy */
+.sperre{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;
+  background:linear-gradient(180deg,rgba(16,17,12,.55),rgba(16,17,12,.9) 70%,var(--grund)),url(kopf.jpg) center 35%/cover no-repeat;
+  border-top:3px solid var(--akzent)}
+.sperre-tafel{width:100%;max-width:420px;padding:34px 30px 28px;background:rgba(23,25,18,.9);border:1px solid var(--linie);
+  box-shadow:0 20px 60px rgba(0,0,0,.45);text-align:center}
+.sperre h1{font-size:clamp(34px,8vw,46px)}
+.sperre .unterzeile{margin:10px 0 0;font-size:12px}
+.sperre p{margin:18px 0 0;color:var(--text)}
+.sperre form{display:flex;gap:8px;margin-top:22px}
+.sperre input{flex:1;min-width:0;height:46px;padding:0 14px;font:16px var(--titel);color:var(--fg);background:#0c0d09;
+  border:1px solid var(--linie2);border-radius:0}
+.sperre input::placeholder{color:var(--leise)}
+.sperre button{height:46px;padding:0 20px;font:700 13px/1 var(--titel);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;
+  color:var(--akzent-text);background:var(--akzent);border:1px solid var(--akzent);border-radius:0}
+.sperre button:hover{background:var(--akzent-hell)}
+#fehler{min-height:1.5em;margin:12px 0 0;font-size:14px;color:var(--warn)}
+.sperre .chips{justify-content:center;margin:0 0 16px}
+</style>
+</head>
+<body>
+<div id="handy" class="sperre" hidden>
+  <div class="sperre-tafel">
+    <p class="chips"><span>Nur am PC</span></p>
+    <h1>Rising Frost</h1>
+    <p class="unterzeile">A Co-op Descent</p>
+    <p>Ein Spiel von Marcel. Es läuft nur auf einem Windows-PC, nicht auf Handy oder Tablet.</p>
+    <p><strong>Öffne diese Seite bitte am PC.</strong></p>
+  </div>
+</div>
+<div id="schloss" class="sperre">
+  <div class="sperre-tafel">
+    <p class="chips"><span>Testfassung</span><span>Nur am PC</span></p>
+    <h1>Rising Frost</h1>
+    <p class="unterzeile">A Co-op Descent</p>
+    <p>Ein Spiel von Marcel. Diese Seite ist geschützt.</p>
+    <form id="form"><input id="pw" type="password" placeholder="Passwort" autocomplete="current-password" autofocus aria-label="Passwort"><button>Öffnen</button></form>
+    <p id="fehler" role="alert"></p>
+  </div>
+</div>
+<div id="inhalt" hidden></div>
+<script>
+// Nur am PC: Handys und Tablets (auch iPad, das sich als Mac ausgibt) bekommen nur den Hinweis, kein Passwortfeld
+const ua = navigator.userAgent;
+if (navigator.userAgentData?.mobile || /Android|iPhone|iPad|iPod|Mobile|Silk|Kindle/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) {
+  document.getElementById('schloss').remove();
+  document.getElementById('handy').hidden = false;
+} else {
+const D = {"runden":600000,"salz":"3HwguHZhzdR7AMy8B+0bzg==","iv":"8KE4PEBYke2qS1Z1","daten":"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"};
+const bytes = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const esc = s => String(s).replace(/[&<>"]/g, z => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[z]);
+const mb = b => (b / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 0 }) + ' MB';
+function alter(t) {
+  const s = Date.now() / 1000 - t;
+  if (!(t > 0) || s < 0) return '';
+  if (s < 3600) return 'vor ' + Math.max(1, Math.round(s / 60)) + ' min';
+  if (s < 86400) return 'vor ' + Math.floor(s / 3600) + ' Std.';
+  if (s < 172800) return 'gestern';
+  if (s < 1209600) return 'vor ' + Math.floor(s / 86400) + ' Tagen';
+  return new Date(t * 1000).toLocaleDateString('de-DE', { day: 'numeric', month: 'long' });
+}
+// Stand, Größe und Neuerungen aus der Liste des Starters
+async function standLaden(m) {
+  const liste = m.querySelector('[data-neu]');
+  try {
+    const r = await fetch('../nativ/version.json', { cache: 'no-store' });
+    if (!r.ok) throw new Error(r.status);
+    const v = await r.json();
+    const groesse = Object.values(v.dateien || {}).reduce((s, d) => s + (d.groesse || 0), 0);
+    const gebaut = v.gebaut ? new Date(v.gebaut).toLocaleString('de-DE', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }) : '';
+    m.querySelectorAll('[data-stand]').forEach(e => e.textContent = 'Stand ' + String(v.bau || '').split('-')[0] + (gebaut ? ' vom ' + gebaut : ''));
+    if (groesse) {
+      m.querySelectorAll('[data-groesse]').forEach(e => e.textContent = 'etwa ' + mb(groesse));
+      m.querySelectorAll('[data-platz]').forEach(e => e.textContent = 'Etwa ' + mb(Math.ceil(groesse * 1.15 / 5e7) * 5e7));
+    }
+    const neu = (v.neu || []).slice(0, 10);
+    if (!neu.length) { liste.innerHTML = '<li class="leise">Noch keine Liste der Neuerungen in diesem Stand.</li>'; return; }
+    liste.innerHTML = neu.map(n => {
+      const [kopf, ...rest] = String(n.text).split(' - ');
+      const art = n.art === 'fix' ? 'fix' : n.art === 'schneller' ? 'schneller' : 'neu';
+      const name = { neu: 'NEU', fix: 'FIX', schneller: 'TEMPO' }[art];
+      return '<li><span class="marke ' + art + '">' + name + '</span><span class="was"><b>' + esc(kopf) + '</b>' +
+        (rest.length ? ' – ' + esc(rest.join(' - ')) : '') + '</span><span class="wann">' + esc(alter(n.zeit)) + '</span></li>';
+    }).join('');
+    if ((v.neu || []).length > neu.length) liste.insertAdjacentHTML('afterend', '<p class="neu-fuss">Die letzten ' + neu.length + ' von ' + v.neu.length + ' Neuerungen. Der Starter zeigt, was seit deinem letzten Start dazugekommen ist.</p>');
+  } catch (_) {
+    m.querySelectorAll('[data-stand]').forEach(e => e.textContent = 'aktueller Stand');
+    liste.innerHTML = '<li class="leise">Die Liste der Neuerungen ließ sich gerade nicht laden.</li>';
+  }
+}
+async function oeffnen(pw) {
+  const roh = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw.normalize('NFC')), 'PBKDF2', false, ['deriveKey']);
+  const k = await crypto.subtle.deriveKey({ name: 'PBKDF2', hash: 'SHA-256', salt: bytes(D.salz), iterations: D.runden }, roh,
+    { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+  const klar = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: bytes(D.iv) }, k, bytes(D.daten));
+  const m = document.getElementById('inhalt');
+  m.innerHTML = new TextDecoder().decode(klar);
+  m.hidden = false;
+  document.getElementById('schloss').remove();
+  window.scrollTo(0, 0);
+  return standLaden(m);
+}
+document.getElementById('form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = document.getElementById('fehler'), pw = document.getElementById('pw').value;
+  if (!pw) { f.textContent = 'Bitte das Passwort eingeben.'; return; }
+  f.textContent = 'Prüfe …';
+  try { await oeffnen(pw); } catch (_) { f.textContent = 'Falsches Passwort.'; }
+});
+}
+</script>
+</body>
+</html>
