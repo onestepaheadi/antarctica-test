@@ -1,0 +1,632 @@
+{
+ "format": 1,
+ "bau": "5a497803b9-cfa980dd",
+ "commit": "5a497803b987f6f22be97f010a9dcbd1f66cb46f",
+ "zeit": 1795308270,
+ "gebaut": "2026-11-22T00:48:22.969Z",
+ "start": "shootergame.exe",
+ "neu": [
+  {
+   "id": "09c816bcb4",
+   "zeit": 1795289873,
+   "art": "fix",
+   "text": "Diagnose-Test erwartet unter macOS den Metal-Klartext"
+  },
+  {
+   "id": "f29b0b8329",
+   "zeit": 1795288556,
+   "art": "fix",
+   "text": "Kreaturdaten-Test vergleicht Zahlen mit Spielraum (macOS/ARM rechnet in den letzten Bits anders), CI ohne Abbruch beim ersten Fehler"
+  },
+  {
+   "id": "27fdc1d138",
+   "zeit": 1795288088,
+   "art": "neu",
+   "text": "Heli fliegt nach echter Rotor- und Triebwerksphysik (Regel „Flug echt“, Aufzeichnung Version 17)"
+  },
+  {
+   "id": "f1d41a47ed",
+   "zeit": 1795287608,
+   "art": "neu",
+   "text": "Partner-Probe auch draußen - mitspieler_aussen und Probe teilen sich Lage und Figur, bilder-partner.mjs --draussen"
+  },
+  {
+   "id": "6e7efa934c",
+   "zeit": 1795286476,
+   "art": "neu",
+   "text": "Wetter & Tageszeit im Pausenmenü - Wetter und Sonne im laufenden Spiel umschalten"
+  },
+  {
+   "id": "ee89ff99a8",
+   "zeit": 1795286107,
+   "art": "neu",
+   "text": "Koop-Partner trägt draußen seine Waffe - Waffe aus der Kampfbeschreibung, Anschlag je Sprint/Nachladen/Visier, Waffenmodell in der Welt ohne mitgebackene Hände"
+  },
+  {
+   "id": "eec84bc920",
+   "zeit": 1795280575,
+   "art": "fix",
+   "text": "Zwillingsgang mit eigener Typnummer 49 - nach der Zusammenführung teilte er die 48 mit der Trainingshalle"
+  },
+  {
+   "id": "b2425bd54f",
+   "zeit": 1795276841,
+   "art": "neu",
+   "text": "Einfügen per Cmd+V unter macOS (pbpaste und Command-Taste)"
+  },
+  {
+   "id": "e4c48d96c1",
+   "zeit": 1795276495,
+   "art": "neu",
+   "text": "Zwillingsgang - zwei Gänge mit Gitter, Wechselschotts, Gegengewicht mit Hubbühne, Hallenhebel (Koop-Übergänge, Version 13)"
+  },
+  {
+   "id": "6eb6c13d29",
+   "zeit": 1795273191,
+   "art": "neu",
+   "text": "Natives macOS (Metal, App-Bau per GitHub Actions) und OS-passende Anleitung für Windows und macOS"
+  },
+  {
+   "id": "0e746d3ba6",
+   "zeit": 1795269980,
+   "art": "neu",
+   "text": "Durchgehende Ladebalken - Spiel, Starter und Browser zeigen immer, was gerade passiert"
+  },
+  {
+   "id": "0f7b07401f",
+   "zeit": 1795269979,
+   "art": "neu",
+   "text": "DirectX 12 mit DXC statt FXC - erstes Bild nach gut 5 s statt gut 45 s, Rückfall auf FXC ohne Absturz"
+  },
+  {
+   "id": "bea0f4a3cb",
+   "zeit": 1795238294,
+   "art": "fix",
+   "text": "Starter wartet auf das erste Bild des Spiels und prüft vorher den Speicherplatz"
+  },
+  {
+   "id": "e90ef4db4e",
+   "zeit": 1795238293,
+   "art": "fix",
+   "text": "Start ohne weißes Fenster und mit verständlicher Fehlermeldung, Exit-Code ungleich 0 bei jedem Fehler"
+  },
+  {
+   "id": "80724c92e8",
+   "zeit": 1795238293,
+   "art": "neu",
+   "text": "Grafik-Rückfallkette, OpenGL-Pfad und schnellerer DirectX-12-Start im Renderer"
+  },
+  {
+   "id": "719c176259",
+   "zeit": 1795234372,
+   "art": "fix",
+   "text": "Verlorenes Grafikgerät aus t3/antarktis-ganze-welt übernommen (2a7d725f) - Wache je Bild, Neuaufbau am selben Fenster, Protokoll"
+  },
+  {
+   "id": "3e999a265d",
+   "zeit": 1795232530,
+   "art": "neu",
+   "text": "Ragdoll für die neuen Gegner - Eiswurm als Kette, Panzerassel, Klammerer und Lichtköder als kippende Körper mit schlaffen Beinen, Lastdrohne stürzt trudelnd samt Kiste ab, Endlagen je Gegner verschieden"
+  },
+  {
+   "id": "2ebef4eca7",
+   "zeit": 1795229364,
+   "art": "neu",
+   "text": "Ragdoll beim Sterben - Söldner, Titan, alte Kreaturen und Koloss fallen physikalisch nach Trefferrichtung und Zone, mit Wand- und Bodenkollision und wechselnden Endlagen; Titan schwebt nicht mehr"
+  },
+  {
+   "id": "21e4cbd87b",
+   "zeit": 1795229364,
+   "art": "fix",
+   "text": "Feinschliff neue Gegner - Panzerassel ohne Flackern nach dem Rollen und überspringbar, Lichtköder schwarz und aufrecht mit neuer Gottesanbeterin-Bewegung in dunklen Ecken, Eiswurm halb so schnell und schlängelnd, Lastdrohne stürzt trudelnd "
+  },
+  {
+   "id": "17f9f4375f",
+   "zeit": 1795227994,
+   "art": "neu",
+   "text": "Koop-Übergänge - keine Außenabschnitte, Doppel-Rohrpost im Sicherheitsraum, Zwei-Schlüssel-Schleuse (Aufzeichnung Version 13)"
+  },
+  {
+   "id": "0a1ab5e2c2",
+   "zeit": 1795227882,
+   "art": "fix",
+   "text": "Schneefahnen nur im Wind und in Böen - bei ruhiger Lage rauchen die Gipfel nicht mehr"
+  },
+  {
+   "id": "3458a90b31",
+   "zeit": 1795227845,
+   "art": "neu",
+   "text": "Koop-Prüfung mit eigenem Vermittler, Verbindungsfehler sichtbar, Abmelden beim Beenden"
+  },
+  {
+   "id": "a6917d1a6b",
+   "zeit": 1795227129,
+   "art": "fix",
+   "text": "Schneefahnen als weiche Wölkchen statt als Band - halten auch mit bewegter Kamera"
+  },
+  {
+   "id": "95ea424367",
+   "zeit": 1795226387,
+   "art": "neu",
+   "text": "Koop nativ spielbar - eigener Vermittler beim Hosten, Raumcode gewürfelt, Abmelden, HUD wie allein"
+  },
+  {
+   "id": "adda26ff66",
+   "zeit": 1795223089,
+   "art": "neu",
+   "text": "Schneewolke des Rotorabwinds aus dem Prüfstand im Spiel - der Heli wirbelt über lockerem Schnee dieselbe Wolke auf, die Abwind-Schwaden entfallen"
+  },
+  {
+   "id": "6e034ac90d",
+   "zeit": 1795220735,
+   "art": "fix",
+   "text": "Schnee lädt nicht mehr sichtbar nach - das Feld des detaillierten Schnees ist rund, läuft am Rand ins Gelände aus und folgt stetig"
+  },
+  {
+   "id": "412047aafe",
+   "zeit": 1795214229,
+   "art": "neu",
+   "text": "Training - Hauptmenü „Training“, Trainingsfeld auf Tab mit Gegnerwahl, Waffen und Aufsätzen, Reglern für das Gefühl, Statistik im HUD"
+  },
+  {
+   "id": "2e59e02e39",
+   "zeit": 1795211276,
+   "art": "neu",
+   "text": "Training im Kern - Trainingshalle als eigene Karte, Zielreihen mit Wiederkehr, Ziele ohne Gegenwehr, scharf schaltbar, Statistik, Regler für das Waffengefühl"
+  },
+  {
+   "id": "c0f0a85e77",
+   "zeit": 1795211055,
+   "art": "fix",
+   "text": "Spieltest Antarktis - Heli steht am Hang und hebt nicht von selbst ab (Aufzeichnung Version 14), keine Eiswände aus Radspuren, weiche Abwind-Schwaden statt runder Scheiben, Gipfelfahnen ohne Kanten"
+  },
+  {
+   "id": "7f8f30d3f7",
+   "zeit": 1795208897,
+   "art": "neu",
+   "text": "Neue Gegner fertig - eigene Laute, Eiswurm und Panzerassel in Steckbriefgröße"
+  },
+  {
+   "id": "6373a0891d",
+   "zeit": 1795206590,
+   "art": "neu",
+   "text": "Neue Gegner im Bild - Tripo-Modelle mit eigenem Skelett, Bewegung aus dem Kern, Schild und Sani als Tripo-Figuren"
+  },
+  {
+   "id": "2a7d725f32",
+   "zeit": 1795205069,
+   "art": "fix",
+   "text": "Verlorenes Grafikgerät - das Spiel erkennt es und baut die Grafik selbst neu auf, statt mit stehendem Bild weiterzulaufen"
+  },
+  {
+   "id": "8b231d9134",
+   "zeit": 1795204524,
+   "art": "neu",
+   "text": "Neue Gegner im Kern - Eiswurm, Panzerassel, Klammerer, Lichtköder, Lastdrohne hinter der Regel (Aufzeichnung Version 12)"
+  },
+  {
+   "id": "294dc7187a",
+   "zeit": 1795196274,
+   "art": "neu",
+   "text": "Die Welt ist die Antarktis - Standardgelände, ganze Karte befliegbar, nur NORD-9, keine Reste der alten Spielwelt (Aufzeichnung Version 13)"
+  },
+  {
+   "id": "10b02415cb",
+   "zeit": 1795195829,
+   "art": "neu",
+   "text": "Starter und Anleitung im Stil des Spiels - Kopfbild aus dem Spiel, Neu seit deinem letzten Stand, Zahlen des Laufs, Starter aktualisiert sich selbst"
+  },
+  {
+   "id": "3c827ffefd",
+   "zeit": 1795192328,
+   "art": "neu",
+   "text": "Schneespuren bleiben beim Umzug der Schneewelt, die eigene Spur trägt überall (Aufzeichnung Version 12)"
+  },
+  {
+   "id": "6e3f731da6",
+   "zeit": 1795190522,
+   "art": "neu",
+   "text": "Orte ohne Modell sichtbar - Basis, Wetterstation, Kessler, Ölplattform, WEST-4 und KAMM-7 als Stellvertreter aus ihren Kollisionsquadern; Laufweg mit Schulter"
+  },
+  {
+   "id": "9547d45527",
+   "zeit": 1795188763,
+   "art": "neu",
+   "text": "Wind und Nebel in den Bergen - Schneefahnen an Gipfeln und Graten, Wolkenfahnen an den höchsten Gipfeln, Nebelbänke in den Senken"
+  },
+  {
+   "id": "6b74817f13",
+   "zeit": 1795186762,
+   "art": "fix",
+   "text": "Schnee auf NORD-9 - keine Kante mehr am Landefeld, Einschusslöcher auch auf dem Beton ringsum"
+  },
+  {
+   "id": "8c6b4156b7",
+   "zeit": 1795137536,
+   "art": "fix",
+   "text": "Schnee lädt im Heli-Anflug früh - Umzug zum Landeplatz ab 1,3 km, Felddecke vorab, Ducken stempelt im tiefen Schnee"
+  },
+  {
+   "id": "3ab6221784",
+   "zeit": 1795135871,
+   "art": "neu",
+   "text": "Ego-Füße in den Abdrücken des simulierten Schnees, Gang im Takt der Schneeschritte, längere Schritte und Schluss-Schritt"
+  },
+  {
+   "id": "c221df932b",
+   "zeit": 1795134401,
+   "art": "fix",
+   "text": "Schnee - Einschusslöcher und Fußspuren kommen zuverlässig an"
+  },
+  {
+   "id": "3d53421d3d",
+   "zeit": 1795132318,
+   "art": "neu",
+   "text": "Deagle - Metall spiegelt draußen die echte Umgebung, vier Oberflächen, Detailkarten 2048², Gebrauchsspuren, Riefen als Sägezahn-Relief"
+  },
+  {
+   "id": "6dcbea5c3c",
+   "zeit": 1795124514,
+   "art": "neu",
+   "text": "Deagle neu nach 3D-Referenzmodell - Form (Schlitten, Lauf, Sicherung, Rahmen, Griff) und dunkler, seidenmatter Waffenstahl (Material 31)"
+  },
+  {
+   "id": "71da315dfc",
+   "zeit": 1795108231,
+   "art": "neu",
+   "text": "Kern rechnet mit dem sichtbaren simulierten Schnee, Schnee bremst schon flach (Aufzeichnung Version 11)"
+  },
+  {
+   "id": "5b3ddf1b50",
+   "zeit": 1795089499,
+   "art": "neu",
+   "text": "Eigener Körper mit den Beinen der Partner-Figur, Overall und Ärmel im Ranger-Grün, Handschuhe wie bisher"
+  },
+  {
+   "id": "8ee81946bc",
+   "zeit": 1795087686,
+   "art": "neu",
+   "text": "Koop-Partner draußen und in der Kabine als eigene Figur statt des Segmentkörpers"
+  },
+  {
+   "id": "c288e4807b",
+   "zeit": 1795083353,
+   "art": "neu",
+   "text": "Beispiel heli_kulisse - Flugklang und Rotor am Platz NORD-9 als lange WAV-Dateien zum Anhören (Vorlage für das Musikstück flug)"
+  },
+  {
+   "id": "fac2386ad4",
+   "zeit": 1795049336,
+   "art": "neu",
+   "text": "Schnee aus dem Prüfstand überall - zieht mit dem Spieler und dem tief fliegenden Heli um, Felder des Kerns im ganzen Gebiet, Rand ohne Schneekante"
+  },
+  {
+   "id": "6c2c341cc3",
+   "zeit": 1795048368,
+   "art": "neu",
+   "text": "Heli bedienbar und sauber - MG besetzen und schießen, Hülle zu Fuß, Landen auf Schnee, keine Splitter im Cockpit-Himmel, Heck innen ruhig"
+  },
+  {
+   "id": "436c3607e3",
+   "zeit": 1795048094,
+   "art": "fix",
+   "text": "Schnee im Spieltest - Einschüsse bleiben, Tempo wie im Prüfstand, Schritte klingen und wippen mit den Abdrücken, keine Schneeplatte fern von NORD-9"
+  },
+  {
+   "id": "3629997b41",
+   "zeit": 1795044807,
+   "art": "neu",
+   "text": "Nacht wie im Schnee-Prüfstand - blauer Mond, dunkelblauer Himmel, Mondschatten; draußen 5 % Mondlicht statt 1,5 %"
+  },
+  {
+   "id": "8e7415c6fc",
+   "zeit": 1795043823,
+   "art": "fix",
+   "text": "keine Schneeplatten mehr an den Felswänden um den Platz - Decke nach Steilheit, Nische frei, Schneeboden ohne Grunddecke verworfen"
+  },
+  {
+   "id": "b39a60be3c",
+   "zeit": 1795042291,
+   "art": "neu",
+   "text": "sanfte Dünen in der Schneedecke wie die Grunddecke des Prüfstands - ±15 cm über gut 6 m, nur im tiefen Schnee, nur im Bild"
+  },
+  {
+   "id": "9f89847f5e",
+   "zeit": 1795042141,
+   "art": "neu",
+   "text": "Schneehauben auf dem Platz wie im Prüfstand - Dächer, Vorsprünge, Kanten und Kisten mit Dicke und rundem Wulst"
+  },
+  {
+   "id": "859073843e",
+   "zeit": 1795041773,
+   "art": "neu",
+   "text": "Koop-Partner in Oliv und Schwarz, hochwertig eingekleidet"
+  },
+  {
+   "id": "27cc25f915",
+   "zeit": 1795040920,
+   "art": "neu",
+   "text": "Figuren werfen draußen Sonnenschatten - Zielfiguren, Mitspieler und der eigene Körper auf Schnee und Gelände"
+  },
+  {
+   "id": "121d66477c",
+   "zeit": 1795038572,
+   "art": "neu",
+   "text": "Schnee und Licht draußen wie im Schnee-Prüfstand - Tag als Standard, Himmel und Tonkurve des Prüfstands, Tiefe aus dem Kern, Schatten von Bauten und Heli auf dem Schnee"
+  },
+  {
+   "id": "67ea6f8ed8",
+   "zeit": 1795037188,
+   "art": "neu",
+   "text": "Schnee aus dem Prüfstand mit Spielwirkung - Decke nach der Tiefe des Kerns, Krater, Einschüsse, Tritte anderer, Heli-Abwind"
+  },
+  {
+   "id": "0b9ccbe5df",
+   "zeit": 1795035432,
+   "art": "fix",
+   "text": "Tripo-Figuren stehen gerade und aufrecht - Knie fast gestreckt, Becken und Schultern waagerecht und mittig"
+  }
+ ],
+ "starter": {
+  "sha256": "3a742d0659cd76d4ead15113bb09375e29254a745ee156ce247122e351611391",
+  "groesse": 875008
+ },
+ "koop": null,
+ "dateien": {
+  "shootergame.exe": {
+   "pfad": "shootergame.a7e04856375a004a.exe",
+   "sha256": "a7e04856375a004a8ce23f3f2e21d88f866af39d3dfced55fb0f1fcfd9fc4a50",
+   "groesse": 21203456
+  },
+  "voreinstellungen.txt": {
+   "pfad": "voreinstellungen.0f3e7934e9195e3c.txt",
+   "sha256": "0f3e7934e9195e3c9ecabd32c3913deb8dffa1ca17cd05a88bc756068b24ef41",
+   "groesse": 630
+  },
+  "dxcompiler.dll": {
+   "pfad": "dxcompiler.0689e2fee0a1c9df.dll",
+   "sha256": "0689e2fee0a1c9df8662a59680469f24e2a3ad7ce6bbbcc9284f7a83172bfc59",
+   "groesse": 22274872
+  },
+  "dxil.dll": {
+   "pfad": "dxil.64be2368211d257a.dll",
+   "sha256": "64be2368211d257a038a7d4ea6bb3e24c878eb8d588c7b8414fccf759b69c2ac",
+   "groesse": 1995584
+  },
+  "lizenzen/dxc-LICENSE-MS.txt": {
+   "pfad": "dxc-LICENSE-MS.e249948c6c7b0007.txt",
+   "sha256": "e249948c6c7b0007e90638ad749d0e89c84634dcc8c28436a52b8b2dbce4a31e",
+   "groesse": 13005
+  },
+  "lizenzen/dxc-LICENSE-LLVM.txt": {
+   "pfad": "dxc-LICENSE-LLVM.b2551288a0381a79.txt",
+   "sha256": "b2551288a0381a79527d63c1590ae8bac98de4dafa1afd0702625d6e82524b85",
+   "groesse": 1936
+  },
+  "lizenzen/dxc-LICENCE-MIT.txt": {
+   "pfad": "dxc-LICENCE-MIT.fd532481d828e13a.txt",
+   "sha256": "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d",
+   "groesse": 1073
+  },
+  "lizenzen/dxc-QUELLE.md": {
+   "pfad": "dxc-QUELLE.72e8b1a776a6c242.md",
+   "sha256": "72e8b1a776a6c24253aa70e973b9105dce399cf6830a65eb0c453ddb25031439",
+   "groesse": 1689
+  },
+  "pakete/beine.bin": {
+   "pfad": "../pakete/beine.b524bf298c77e2f9.bin",
+   "sha256": "b524bf298c77e2f978db28b4127a1ff3b064f2f5a05163554f6af73c5fa91c79",
+   "groesse": 4193235
+  },
+  "pakete/fels-innen.bin": {
+   "pfad": "../pakete/fels-innen.0cf58794bb7ca011.bin",
+   "sha256": "0cf58794bb7ca01197bd6558bb47ce396fdc4cde5cc6a84dca023d2991fb4e36",
+   "groesse": 4528371
+  },
+  "pakete/figur.bin": {
+   "pfad": "../pakete/figur.edf7c0050289c589.bin",
+   "sha256": "edf7c0050289c589adc0252ca20f4e0b63d89eda60dae4f27d9c91b92a4aedd1",
+   "groesse": 478413
+  },
+  "pakete/gegner-eiswurm.bin": {
+   "pfad": "../pakete/gegner-eiswurm.e292c6c2c708ec03.bin",
+   "sha256": "e292c6c2c708ec03af9796ac6fc16c19b98b538c3b5cbd4fdae1c1051d56a36c",
+   "groesse": 1421901
+  },
+  "pakete/gegner-klammerer.bin": {
+   "pfad": "../pakete/gegner-klammerer.f062c6a477a3aa3f.bin",
+   "sha256": "f062c6a477a3aa3f8a8ff8ef445c1dde16ca1150fc4b3295ae86ee76b016e145",
+   "groesse": 1737734
+  },
+  "pakete/gegner-koloss.bin": {
+   "pfad": "../pakete/gegner-koloss.139ff6109ac806e4.bin",
+   "sha256": "139ff6109ac806e4a7251f48d81d4155c97a51c91925733700533c74d1c73196",
+   "groesse": 361846
+  },
+  "pakete/gegner-kriecher.bin": {
+   "pfad": "../pakete/gegner-kriecher.cbfeca84b3e238f0.bin",
+   "sha256": "cbfeca84b3e238f0b497064c7e7b43d21938a4ea58f062ae13fa7df087f7b5f2",
+   "groesse": 1978086
+  },
+  "pakete/gegner-lastdrohne-kiste.bin": {
+   "pfad": "../pakete/gegner-lastdrohne-kiste.69600c6ff7b9c369.bin",
+   "sha256": "69600c6ff7b9c36956cfb47ca9851805bd5f7bef5cbb07eb6667797f9149ec66",
+   "groesse": 1839158
+  },
+  "pakete/gegner-lastdrohne.bin": {
+   "pfad": "../pakete/gegner-lastdrohne.deedb35ea06a47a9.bin",
+   "sha256": "deedb35ea06a47a95495d2c11988d8f15a0b8c99578ba9d9f764a9d5a6551920",
+   "groesse": 1815415
+  },
+  "pakete/gegner-lichtkoeder.bin": {
+   "pfad": "../pakete/gegner-lichtkoeder.dcd3a55680df2aff.bin",
+   "sha256": "dcd3a55680df2aff70898bf962463bb02515f124b78a8a52001ae84639fd3808",
+   "groesse": 972453
+  },
+  "pakete/gegner-mensch.bin": {
+   "pfad": "../pakete/gegner-mensch.05d0047abe4f1828.bin",
+   "sha256": "05d0047abe4f1828c693bce68eb8f1b98eaa68572eda7686b588beda4a58c5ba",
+   "groesse": 1329986
+  },
+  "pakete/gegner-panzerassel.bin": {
+   "pfad": "../pakete/gegner-panzerassel.ccc2afd69c229ca6.bin",
+   "sha256": "ccc2afd69c229ca64274866904ceea889859f22367696efb03e382bee2516367",
+   "groesse": 1686082
+  },
+  "pakete/gegner-schwarm.bin": {
+   "pfad": "../pakete/gegner-schwarm.fc94ba0a5f9fcf59.bin",
+   "sha256": "fc94ba0a5f9fcf594ec456a5a972fb59aa1dfea1c1bea9f713781e2ffae23057",
+   "groesse": 558540
+  },
+  "pakete/gegner-skorpion.bin": {
+   "pfad": "../pakete/gegner-skorpion.64c87465b78ab579.bin",
+   "sha256": "64c87465b78ab5798e9d24ee2b301ddbd999a165f734c99bcd6a92a38ad71df8",
+   "groesse": 1961845
+  },
+  "pakete/gegner-soeldner-c.bin": {
+   "pfad": "../pakete/gegner-soeldner-c.dc8e03296f3078e4.bin",
+   "sha256": "dc8e03296f3078e4dbab1c5540fa3c6ae78e779d73c2293e6c78658e08627b51",
+   "groesse": 2083253
+  },
+  "pakete/gegner-soeldner-f.bin": {
+   "pfad": "../pakete/gegner-soeldner-f.8eb9706841de4fca.bin",
+   "sha256": "8eb9706841de4fca0ece064515e035156923d1eac7ea49c7b123ffb4537f872b",
+   "groesse": 1826888
+  },
+  "pakete/gegner-soeldner-g.bin": {
+   "pfad": "../pakete/gegner-soeldner-g.0af75e70d3502271.bin",
+   "sha256": "0af75e70d35022718af2ea70c12dd7b4d0c0ac8bd379941722b8886f5790e3a0",
+   "groesse": 2023390
+  },
+  "pakete/gegner-soeldner-helm.bin": {
+   "pfad": "../pakete/gegner-soeldner-helm.f41ab0c85cca2e83.bin",
+   "sha256": "f41ab0c85cca2e83ddb3c160bb5628a04a0c4c4c5603f4adef99cfe3f6dd2d06",
+   "groesse": 1744614
+  },
+  "pakete/gegner-soeldner-m.bin": {
+   "pfad": "../pakete/gegner-soeldner-m.32d70ebe3430e7ea.bin",
+   "sha256": "32d70ebe3430e7eaa050bcf55e5e0f592e2f826b3412d44f0e97c56734d80b6b",
+   "groesse": 2049649
+  },
+  "pakete/gegner-spinne.bin": {
+   "pfad": "../pakete/gegner-spinne.0e9473eb763823ba.bin",
+   "sha256": "0e9473eb763823ba5f66bf6b75ff6ce4bb84cef08b53e6a96081fd0bcd29c9db",
+   "groesse": 2040480
+  },
+  "pakete/gegner-springer-panzer.bin": {
+   "pfad": "../pakete/gegner-springer-panzer.1e85d5e24587dff5.bin",
+   "sha256": "1e85d5e24587dff5183e14035322bad6bf0c2a51321a8cfe243593ac0ac22ef0",
+   "groesse": 1885650
+  },
+  "pakete/gegner-titan.bin": {
+   "pfad": "../pakete/gegner-titan.204e21e3632ba199.bin",
+   "sha256": "204e21e3632ba19984daabb9413fcb9c7e24260897eda4a2e7f623a537dc5eb5",
+   "groesse": 3228517
+  },
+  "pakete/gelaende.bin": {
+   "pfad": "../pakete/gelaende.753952d355af3d72.bin",
+   "sha256": "753952d355af3d7202c32e7840ca3ff1b4e16c8bc31d1908493772bab8989ad6",
+   "groesse": 36752436
+  },
+  "pakete/hand.bin": {
+   "pfad": "../pakete/hand.e9fe7e9e28f0fa4a.bin",
+   "sha256": "e9fe7e9e28f0fa4aa554a055a80d2c75c2eba5f9d37aae2772f7a6569d70908a",
+   "groesse": 4359770
+  },
+  "pakete/heli-innen.bin": {
+   "pfad": "../pakete/heli-innen.50b6f47324706121.bin",
+   "sha256": "50b6f47324706121276913752948ffa8d99d07f531c8760b5285616c9bf0e184",
+   "groesse": 4798075
+  },
+  "pakete/heli-moebel.bin": {
+   "pfad": "../pakete/heli-moebel.b0bdb29dabd312d8.bin",
+   "sha256": "b0bdb29dabd312d807be27ad42e0b2b8b9046ea24205cb6b852dd74bf878eb90",
+   "groesse": 34309410
+  },
+  "pakete/heli.bin": {
+   "pfad": "../pakete/heli.763f798386277fc5.bin",
+   "sha256": "763f798386277fc5c5c89374c31c60883cc361e047fa7cc9cee8c0f11dd638fe",
+   "groesse": 1652115
+  },
+  "pakete/koerper.bin": {
+   "pfad": "../pakete/koerper.0332be01d4dff3b2.bin",
+   "sha256": "0332be01d4dff3b2f948ece96b16141d32e69877fe3eb0a63e3a26114a13b06e",
+   "groesse": 3665775
+  },
+  "pakete/modelle.txt": {
+   "pfad": "../pakete/modelle.6ca72d6b2a1af0b4.txt",
+   "sha256": "6ca72d6b2a1af0b4a2c811dc182a2e43715c0088dae229a14e9cf5049268038d",
+   "groesse": 1258
+  },
+  "pakete/musik/flug-2.wav": {
+   "pfad": "../pakete/musik/flug-2.9e5517a02dc6fd3a.wav",
+   "sha256": "9e5517a02dc6fd3a3ed709ceb5e8981b73a608866191d92754b276e4c402a9b9",
+   "groesse": 19402182
+  },
+  "pakete/musik/flug-3.wav": {
+   "pfad": "../pakete/musik/flug-3.6dbedf29ef44505b.wav",
+   "sha256": "6dbedf29ef44505b8b8378a0a5e29b84fa9d0a59d80bcea9a51d2a23729fbc95",
+   "groesse": 19402182
+  },
+  "pakete/musik/flug.wav": {
+   "pfad": "../pakete/musik/flug.ff93e93d756342aa.wav",
+   "sha256": "ff93e93d756342aaee408f30dbff550a34a478728e53ca26367354322becda89",
+   "groesse": 19402182
+  },
+  "pakete/musik/liste.txt": {
+   "pfad": "../pakete/musik/liste.6165b58fa9d7029f.txt",
+   "sha256": "6165b58fa9d7029f71a30332b7822b9a5e26fca772a8f16c7d7efe693ea79a2f",
+   "groesse": 19
+  },
+  "pakete/partner.bin": {
+   "pfad": "../pakete/partner.5103b30d52a9e05a.bin",
+   "sha256": "5103b30d52a9e05a52536eeb3ff3a71e34a827327b029129243ff6e4d314268c",
+   "groesse": 15081632
+  },
+  "pakete/platz-nord9.bin": {
+   "pfad": "../pakete/platz-nord9.954a1ef76c94404e.bin",
+   "sha256": "954a1ef76c94404e4dbb89878a838480fba68d29399bc68112a9bf0a15557edd",
+   "groesse": 3734541
+  },
+  "pakete/waffe-granate.bin": {
+   "pfad": "../pakete/waffe-granate.c0926decc1482171.bin",
+   "sha256": "c0926decc1482171a1f839243930df45e7095a75db6ad642b2c0021e04bf452c",
+   "groesse": 33475
+  },
+  "pakete/waffe-magnum.bin": {
+   "pfad": "../pakete/waffe-magnum.c5b3a81ac5e25791.bin",
+   "sha256": "c5b3a81ac5e257912ef9fc87484ed443fe1d1ddbfdc44df10a35b3838f6cb567",
+   "groesse": 6229630
+  },
+  "pakete/waffe-messer.bin": {
+   "pfad": "../pakete/waffe-messer.28dcc1e722524ba0.bin",
+   "sha256": "28dcc1e722524ba0ccdf4e890b55567315176040261103475033cc51b1bd71a9",
+   "groesse": 275001
+  },
+  "pakete/waffe-mp.bin": {
+   "pfad": "../pakete/waffe-mp.6c328be64630b9ae.bin",
+   "sha256": "6c328be64630b9aef90aadc40bdeb5c921167d0a824612d2b0fbec1547dc3920",
+   "groesse": 3354609
+  },
+  "pakete/waffe-pistole.bin": {
+   "pfad": "../pakete/waffe-pistole.1af43f16e4731a57.bin",
+   "sha256": "1af43f16e4731a57b48b46b8f67dcf16f1c387bde76ec88e465be8f62061f9f6",
+   "groesse": 2621457
+  },
+  "pakete/waffe-praezision.bin": {
+   "pfad": "../pakete/waffe-praezision.b4ca527eacf278d3.bin",
+   "sha256": "b4ca527eacf278d3fa6d291f6d6e64cc6081a25d31dc9e2c28e24710c18ae00e",
+   "groesse": 3316500
+  },
+  "pakete/waffe-schrotflinte.bin": {
+   "pfad": "../pakete/waffe-schrotflinte.0575939384fa2579.bin",
+   "sha256": "0575939384fa25798c43ab685878b6cf83522f8d61dc92741bec5a83ce3b7e78",
+   "groesse": 2658461
+  },
+  "pakete/waffe-sturmgewehr.bin": {
+   "pfad": "../pakete/waffe-sturmgewehr.ec3e9dc3b43d9b5b.bin",
+   "sha256": "ec3e9dc3b43d9b5b2dc171268658d404d2a17c537cd57c91104a757f736ab89b",
+   "groesse": 4172757
+  }
+ }
+}

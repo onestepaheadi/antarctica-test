@@ -1,0 +1,303 @@
+{
+ "bau": "5a497803b9-cfa980dd",
+ "commit": "5a497803b987f6f22be97f010a9dcbd1f66cb46f",
+ "geaendert": false,
+ "gebaut": "2026-11-22T00:48:41.480Z",
+ "pkg": "pkg-066840e24b75faaa",
+ "pakete": {
+  "beine.bin": "beine.b524bf298c77e2f9.bin",
+  "fels-innen.bin": "fels-innen.0cf58794bb7ca011.bin",
+  "figur.bin": "figur.edf7c0050289c589.bin",
+  "gegner-eiswurm.bin": "gegner-eiswurm.e292c6c2c708ec03.bin",
+  "gegner-klammerer.bin": "gegner-klammerer.f062c6a477a3aa3f.bin",
+  "gegner-koloss.bin": "gegner-koloss.139ff6109ac806e4.bin",
+  "gegner-kriecher.bin": "gegner-kriecher.cbfeca84b3e238f0.bin",
+  "gegner-lastdrohne-kiste.bin": "gegner-lastdrohne-kiste.69600c6ff7b9c369.bin",
+  "gegner-lastdrohne.bin": "gegner-lastdrohne.deedb35ea06a47a9.bin",
+  "gegner-lichtkoeder.bin": "gegner-lichtkoeder.dcd3a55680df2aff.bin",
+  "gegner-mensch.bin": "gegner-mensch.05d0047abe4f1828.bin",
+  "gegner-panzerassel.bin": "gegner-panzerassel.ccc2afd69c229ca6.bin",
+  "gegner-schwarm.bin": "gegner-schwarm.fc94ba0a5f9fcf59.bin",
+  "gegner-skorpion.bin": "gegner-skorpion.64c87465b78ab579.bin",
+  "gegner-soeldner-c.bin": "gegner-soeldner-c.dc8e03296f3078e4.bin",
+  "gegner-soeldner-f.bin": "gegner-soeldner-f.8eb9706841de4fca.bin",
+  "gegner-soeldner-g.bin": "gegner-soeldner-g.0af75e70d3502271.bin",
+  "gegner-soeldner-helm.bin": "gegner-soeldner-helm.f41ab0c85cca2e83.bin",
+  "gegner-soeldner-m.bin": "gegner-soeldner-m.32d70ebe3430e7ea.bin",
+  "gegner-spinne.bin": "gegner-spinne.0e9473eb763823ba.bin",
+  "gegner-springer-panzer.bin": "gegner-springer-panzer.1e85d5e24587dff5.bin",
+  "gegner-titan.bin": "gegner-titan.204e21e3632ba199.bin",
+  "gelaende.bin": "gelaende.753952d355af3d72.bin",
+  "hand.bin": "hand.e9fe7e9e28f0fa4a.bin",
+  "heli-innen.bin": "heli-innen.50b6f47324706121.bin",
+  "heli-moebel.bin": "heli-moebel.b0bdb29dabd312d8.bin",
+  "heli.bin": "heli.763f798386277fc5.bin",
+  "koerper.bin": "koerper.0332be01d4dff3b2.bin",
+  "modelle.txt": "modelle.6ca72d6b2a1af0b4.txt",
+  "musik/flug-2.wav": "musik/flug-2.9e5517a02dc6fd3a.wav",
+  "musik/flug-3.wav": "musik/flug-3.6dbedf29ef44505b.wav",
+  "musik/flug.wav": "musik/flug.ff93e93d756342aa.wav",
+  "musik/liste.txt": "musik/liste.6165b58fa9d7029f.txt",
+  "partner.bin": "partner.5103b30d52a9e05a.bin",
+  "platz-nord9.bin": "platz-nord9.954a1ef76c94404e.bin",
+  "waffe-granate.bin": "waffe-granate.c0926decc1482171.bin",
+  "waffe-magnum.bin": "waffe-magnum.c5b3a81ac5e25791.bin",
+  "waffe-messer.bin": "waffe-messer.28dcc1e722524ba0.bin",
+  "waffe-mp.bin": "waffe-mp.6c328be64630b9ae.bin",
+  "waffe-pistole.bin": "waffe-pistole.1af43f16e4731a57.bin",
+  "waffe-praezision.bin": "waffe-praezision.b4ca527eacf278d3.bin",
+  "waffe-schrotflinte.bin": "waffe-schrotflinte.0575939384fa2579.bin",
+  "waffe-sturmgewehr.bin": "waffe-sturmgewehr.ec3e9dc3b43d9b5b.bin"
+ },
+ "statisch": true,
+ "dateien": {
+  ".htaccess": {
+   "sha256": "b1ffcba43a112c52f0794313592dc5e680b1f92e6aff4fea0659c91c4a29463e",
+   "groesse": 2544
+  },
+  "index.html": {
+   "sha256": "7e6abf492fe3d2959a848a2a74945c7b61f3d455d5d5f6081fef0971ff958489",
+   "groesse": 16860
+  },
+  "nativ/.htaccess": {
+   "sha256": "c9839603870111b8b1595c5050f18f48220a0e0a0e8b2a4cc902886728b26bfc",
+   "groesse": 381
+  },
+  "nativ/dxc-LICENCE-MIT.fd532481d828e13a.txt": {
+   "sha256": "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d",
+   "groesse": 1073
+  },
+  "nativ/dxc-LICENSE-LLVM.b2551288a0381a79.txt": {
+   "sha256": "b2551288a0381a79527d63c1590ae8bac98de4dafa1afd0702625d6e82524b85",
+   "groesse": 1936
+  },
+  "nativ/dxc-LICENSE-MS.e249948c6c7b0007.txt": {
+   "sha256": "e249948c6c7b0007e90638ad749d0e89c84634dcc8c28436a52b8b2dbce4a31e",
+   "groesse": 13005
+  },
+  "nativ/dxc-QUELLE.72e8b1a776a6c242.md": {
+   "sha256": "72e8b1a776a6c24253aa70e973b9105dce399cf6830a65eb0c453ddb25031439",
+   "groesse": 1689
+  },
+  "nativ/dxcompiler.0689e2fee0a1c9df.dll": {
+   "sha256": "0689e2fee0a1c9df8662a59680469f24e2a3ad7ce6bbbcc9284f7a83172bfc59",
+   "groesse": 22274872
+  },
+  "nativ/dxil.64be2368211d257a.dll": {
+   "sha256": "64be2368211d257a038a7d4ea6bb3e24c878eb8d588c7b8414fccf759b69c2ac",
+   "groesse": 1995584
+  },
+  "nativ/shootergame.a7e04856375a004a.exe": {
+   "sha256": "a7e04856375a004a8ce23f3f2e21d88f866af39d3dfced55fb0f1fcfd9fc4a50",
+   "groesse": 21203456
+  },
+  "nativ/version.json": {
+   "sha256": "5a184ea2a80a7466ef0c95255fbf9688cb6fcc951939af3aa917795c734c76ad",
+   "groesse": 22739
+  },
+  "nativ/voreinstellungen.0f3e7934e9195e3c.txt": {
+   "sha256": "0f3e7934e9195e3c9ecabd32c3913deb8dffa1ca17cd05a88bc756068b24ef41",
+   "groesse": 630
+  },
+  "pakete/.htaccess": {
+   "sha256": "c9839603870111b8b1595c5050f18f48220a0e0a0e8b2a4cc902886728b26bfc",
+   "groesse": 381
+  },
+  "pakete/beine.b524bf298c77e2f9.bin": {
+   "sha256": "b524bf298c77e2f978db28b4127a1ff3b064f2f5a05163554f6af73c5fa91c79",
+   "groesse": 4193235
+  },
+  "pakete/fels-innen.0cf58794bb7ca011.bin": {
+   "sha256": "0cf58794bb7ca01197bd6558bb47ce396fdc4cde5cc6a84dca023d2991fb4e36",
+   "groesse": 4528371
+  },
+  "pakete/figur.edf7c0050289c589.bin": {
+   "sha256": "edf7c0050289c589adc0252ca20f4e0b63d89eda60dae4f27d9c91b92a4aedd1",
+   "groesse": 478413
+  },
+  "pakete/gegner-eiswurm.e292c6c2c708ec03.bin": {
+   "sha256": "e292c6c2c708ec03af9796ac6fc16c19b98b538c3b5cbd4fdae1c1051d56a36c",
+   "groesse": 1421901
+  },
+  "pakete/gegner-klammerer.f062c6a477a3aa3f.bin": {
+   "sha256": "f062c6a477a3aa3f8a8ff8ef445c1dde16ca1150fc4b3295ae86ee76b016e145",
+   "groesse": 1737734
+  },
+  "pakete/gegner-koloss.139ff6109ac806e4.bin": {
+   "sha256": "139ff6109ac806e4a7251f48d81d4155c97a51c91925733700533c74d1c73196",
+   "groesse": 361846
+  },
+  "pakete/gegner-kriecher.cbfeca84b3e238f0.bin": {
+   "sha256": "cbfeca84b3e238f0b497064c7e7b43d21938a4ea58f062ae13fa7df087f7b5f2",
+   "groesse": 1978086
+  },
+  "pakete/gegner-lastdrohne-kiste.69600c6ff7b9c369.bin": {
+   "sha256": "69600c6ff7b9c36956cfb47ca9851805bd5f7bef5cbb07eb6667797f9149ec66",
+   "groesse": 1839158
+  },
+  "pakete/gegner-lastdrohne.deedb35ea06a47a9.bin": {
+   "sha256": "deedb35ea06a47a95495d2c11988d8f15a0b8c99578ba9d9f764a9d5a6551920",
+   "groesse": 1815415
+  },
+  "pakete/gegner-lichtkoeder.dcd3a55680df2aff.bin": {
+   "sha256": "dcd3a55680df2aff70898bf962463bb02515f124b78a8a52001ae84639fd3808",
+   "groesse": 972453
+  },
+  "pakete/gegner-mensch.05d0047abe4f1828.bin": {
+   "sha256": "05d0047abe4f1828c693bce68eb8f1b98eaa68572eda7686b588beda4a58c5ba",
+   "groesse": 1329986
+  },
+  "pakete/gegner-panzerassel.ccc2afd69c229ca6.bin": {
+   "sha256": "ccc2afd69c229ca64274866904ceea889859f22367696efb03e382bee2516367",
+   "groesse": 1686082
+  },
+  "pakete/gegner-schwarm.fc94ba0a5f9fcf59.bin": {
+   "sha256": "fc94ba0a5f9fcf594ec456a5a972fb59aa1dfea1c1bea9f713781e2ffae23057",
+   "groesse": 558540
+  },
+  "pakete/gegner-skorpion.64c87465b78ab579.bin": {
+   "sha256": "64c87465b78ab5798e9d24ee2b301ddbd999a165f734c99bcd6a92a38ad71df8",
+   "groesse": 1961845
+  },
+  "pakete/gegner-soeldner-c.dc8e03296f3078e4.bin": {
+   "sha256": "dc8e03296f3078e4dbab1c5540fa3c6ae78e779d73c2293e6c78658e08627b51",
+   "groesse": 2083253
+  },
+  "pakete/gegner-soeldner-f.8eb9706841de4fca.bin": {
+   "sha256": "8eb9706841de4fca0ece064515e035156923d1eac7ea49c7b123ffb4537f872b",
+   "groesse": 1826888
+  },
+  "pakete/gegner-soeldner-g.0af75e70d3502271.bin": {
+   "sha256": "0af75e70d35022718af2ea70c12dd7b4d0c0ac8bd379941722b8886f5790e3a0",
+   "groesse": 2023390
+  },
+  "pakete/gegner-soeldner-helm.f41ab0c85cca2e83.bin": {
+   "sha256": "f41ab0c85cca2e83ddb3c160bb5628a04a0c4c4c5603f4adef99cfe3f6dd2d06",
+   "groesse": 1744614
+  },
+  "pakete/gegner-soeldner-m.32d70ebe3430e7ea.bin": {
+   "sha256": "32d70ebe3430e7eaa050bcf55e5e0f592e2f826b3412d44f0e97c56734d80b6b",
+   "groesse": 2049649
+  },
+  "pakete/gegner-spinne.0e9473eb763823ba.bin": {
+   "sha256": "0e9473eb763823ba5f66bf6b75ff6ce4bb84cef08b53e6a96081fd0bcd29c9db",
+   "groesse": 2040480
+  },
+  "pakete/gegner-springer-panzer.1e85d5e24587dff5.bin": {
+   "sha256": "1e85d5e24587dff5183e14035322bad6bf0c2a51321a8cfe243593ac0ac22ef0",
+   "groesse": 1885650
+  },
+  "pakete/gegner-titan.204e21e3632ba199.bin": {
+   "sha256": "204e21e3632ba19984daabb9413fcb9c7e24260897eda4a2e7f623a537dc5eb5",
+   "groesse": 3228517
+  },
+  "pakete/gelaende.753952d355af3d72.bin": {
+   "sha256": "753952d355af3d7202c32e7840ca3ff1b4e16c8bc31d1908493772bab8989ad6",
+   "groesse": 36752436
+  },
+  "pakete/hand.e9fe7e9e28f0fa4a.bin": {
+   "sha256": "e9fe7e9e28f0fa4aa554a055a80d2c75c2eba5f9d37aae2772f7a6569d70908a",
+   "groesse": 4359770
+  },
+  "pakete/heli-innen.50b6f47324706121.bin": {
+   "sha256": "50b6f47324706121276913752948ffa8d99d07f531c8760b5285616c9bf0e184",
+   "groesse": 4798075
+  },
+  "pakete/heli-moebel.b0bdb29dabd312d8.bin": {
+   "sha256": "b0bdb29dabd312d807be27ad42e0b2b8b9046ea24205cb6b852dd74bf878eb90",
+   "groesse": 34309410
+  },
+  "pakete/heli.763f798386277fc5.bin": {
+   "sha256": "763f798386277fc5c5c89374c31c60883cc361e047fa7cc9cee8c0f11dd638fe",
+   "groesse": 1652115
+  },
+  "pakete/koerper.0332be01d4dff3b2.bin": {
+   "sha256": "0332be01d4dff3b2f948ece96b16141d32e69877fe3eb0a63e3a26114a13b06e",
+   "groesse": 3665775
+  },
+  "pakete/modelle.6ca72d6b2a1af0b4.txt": {
+   "sha256": "6ca72d6b2a1af0b4a2c811dc182a2e43715c0088dae229a14e9cf5049268038d",
+   "groesse": 1258
+  },
+  "pakete/musik/flug-2.9e5517a02dc6fd3a.wav": {
+   "sha256": "9e5517a02dc6fd3a3ed709ceb5e8981b73a608866191d92754b276e4c402a9b9",
+   "groesse": 19402182
+  },
+  "pakete/musik/flug-3.6dbedf29ef44505b.wav": {
+   "sha256": "6dbedf29ef44505b8b8378a0a5e29b84fa9d0a59d80bcea9a51d2a23729fbc95",
+   "groesse": 19402182
+  },
+  "pakete/musik/flug.ff93e93d756342aa.wav": {
+   "sha256": "ff93e93d756342aaee408f30dbff550a34a478728e53ca26367354322becda89",
+   "groesse": 19402182
+  },
+  "pakete/musik/liste.6165b58fa9d7029f.txt": {
+   "sha256": "6165b58fa9d7029f71a30332b7822b9a5e26fca772a8f16c7d7efe693ea79a2f",
+   "groesse": 19
+  },
+  "pakete/partner.5103b30d52a9e05a.bin": {
+   "sha256": "5103b30d52a9e05a52536eeb3ff3a71e34a827327b029129243ff6e4d314268c",
+   "groesse": 15081632
+  },
+  "pakete/platz-nord9.954a1ef76c94404e.bin": {
+   "sha256": "954a1ef76c94404e4dbb89878a838480fba68d29399bc68112a9bf0a15557edd",
+   "groesse": 3734541
+  },
+  "pakete/waffe-granate.c0926decc1482171.bin": {
+   "sha256": "c0926decc1482171a1f839243930df45e7095a75db6ad642b2c0021e04bf452c",
+   "groesse": 33475
+  },
+  "pakete/waffe-magnum.c5b3a81ac5e25791.bin": {
+   "sha256": "c5b3a81ac5e257912ef9fc87484ed443fe1d1ddbfdc44df10a35b3838f6cb567",
+   "groesse": 6229630
+  },
+  "pakete/waffe-messer.28dcc1e722524ba0.bin": {
+   "sha256": "28dcc1e722524ba0ccdf4e890b55567315176040261103475033cc51b1bd71a9",
+   "groesse": 275001
+  },
+  "pakete/waffe-mp.6c328be64630b9ae.bin": {
+   "sha256": "6c328be64630b9aef90aadc40bdeb5c921167d0a824612d2b0fbec1547dc3920",
+   "groesse": 3354609
+  },
+  "pakete/waffe-pistole.1af43f16e4731a57.bin": {
+   "sha256": "1af43f16e4731a57b48b46b8f67dcf16f1c387bde76ec88e465be8f62061f9f6",
+   "groesse": 2621457
+  },
+  "pakete/waffe-praezision.b4ca527eacf278d3.bin": {
+   "sha256": "b4ca527eacf278d3fa6d291f6d6e64cc6081a25d31dc9e2c28e24710c18ae00e",
+   "groesse": 3316500
+  },
+  "pakete/waffe-schrotflinte.0575939384fa2579.bin": {
+   "sha256": "0575939384fa25798c43ab685878b6cf83522f8d61dc92741bec5a83ce3b7e78",
+   "groesse": 2658461
+  },
+  "pakete/waffe-sturmgewehr.ec3e9dc3b43d9b5b.bin": {
+   "sha256": "ec3e9dc3b43d9b5b2dc171268658d404d2a17c537cd57c91104a757f736ab89b",
+   "groesse": 4172757
+  },
+  "pkg-066840e24b75faaa/.htaccess": {
+   "sha256": "c9839603870111b8b1595c5050f18f48220a0e0a0e8b2a4cc902886728b26bfc",
+   "groesse": 381
+  },
+  "pkg-066840e24b75faaa/snippets/spiel-033d5755b78f795e/inline0.js": {
+   "sha256": "d57ff040491e846b9aa4bd199e84aa8e6ca3abc405029b824f389a89e930165f",
+   "groesse": 1826
+  },
+  "pkg-066840e24b75faaa/spiel.js": {
+   "sha256": "aa0a9f4fdd1262495876ad981fcae45ae027587d0d807586c3450ee2142c5be0",
+   "groesse": 127192
+  },
+  "pkg-066840e24b75faaa/spiel_bg.wasm": {
+   "sha256": "e95a405b548d70fdfcd8b6fd158cd05b072e0852aa84f43ab9ec8434af4b458b",
+   "groesse": 10763130
+  },
+  "shootergame-starter.exe": {
+   "sha256": "3a742d0659cd76d4ead15113bb09375e29254a745ee156ce247122e351611391",
+   "groesse": 875008
+  },
+  "testdaten/lauf-ganz.kern": {
+   "sha256": "b6b0ec1cb9d2d551dac8a0050d4173f7577be11d09d7b46f532e35af7bfcf50e",
+   "groesse": 493732
+  }
+ }
+}

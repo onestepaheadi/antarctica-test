@@ -1,0 +1,10 @@
+# Voreinstellungen für shootergame.exe: je Zeile name=wert wie ein Schalter --name=wert (Schalter beim Aufruf gehen vor).
+# Vom Starter geladen (nativ/ der Seite) und bei jedem neuen Stand ersetzt; eigene Änderungen gehen dabei verloren.
+# Kein Koop-Vermittler eingerichtet: Koop-Knöpfe gesperrt („Koop ist auf diesem Server noch nicht eingerichtet“).
+koop-gesperrt=1
+# Koop-Vermittler (Server der Auslieferung, unverschlüsselter Port für das Programm; kein wss://):
+# koop-adresse=spiel.example.de:8781
+# Raumcode vorbelegen (sonst im Hauptmenü eintippen):
+# koop-code=ABCD
+# Name im Koop:
+# koop-name=Tester
